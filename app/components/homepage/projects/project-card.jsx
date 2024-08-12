@@ -1,5 +1,5 @@
 // @flow strict
-
+import Link from 'next/link';
 import * as React from 'react';
 
 function ProjectCard({ project }) {
