@@ -22,46 +22,46 @@ function HeroSection() {
 
       <div>
         <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
-          <h1 className="text-3xl  md:text-6xl text-neutral-700 dark:text-blue-100 !leading-snug text-center mx-auto font-[900]">
+          <h1 className="text-3xl  md:text-6xl text-neutral-700 !leading-snug text-center mx-auto font-[900] text-white">
             Hello, <br />
-            This is <span className=" text-pink-500">{personalData.name}</span>
+            This is <span className="text-[#00adf4]">{personalData.name}</span>
             {` , I'm a Professional `}
-            <span className=" text-[#16f2b3]">{personalData.designation}</span>.
+            <span className="text-[#00adf4]">{personalData.designation}</span>.
           </h1>
 
           <div className="my-12 flex items-center gap-5 m-auto">
             <Link
               href={personalData.github}
               target="_blank"
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
+              className="transition-all text-[#008aff] hover:scale-125 duration-300"
             >
               <BsGithub size={30} />
             </Link>
             <Link
               href={personalData.linkedIn}
               target="_blank"
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
+              className="transition-all text-[#008aff] hover:scale-125 duration-300"
             >
               <BsLinkedin size={30} />
             </Link>
             <Link
               href={personalData.facebook}
               target="_blank"
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
+              className="transition-all text-[#008aff] hover:scale-125 duration-300"
             >
               <FaFacebook size={30} />
             </Link>
             <Link
               href={personalData.leetcode}
               target="_blank"
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
+              className="transition-all text-[#008aff] hover:scale-125 duration-300"
             >
               <SiLeetcode size={30} />
             </Link>
             <Link
               href={personalData.twitter}
               target="_blank"
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
+              className="transition-all text-[#008aff] hover:scale-125 duration-300"
             >
               <FaTwitterSquare size={30} />
             </Link>

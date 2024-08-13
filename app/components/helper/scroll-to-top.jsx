@@ -11,14 +11,21 @@ const ScrollToTop = () => {
   const [btnCls, setBtnCls] = useState(DEFAULT_BTN_CLS);
 
   useEffect(() => {
+    let position = 0;
     const handleScroll = () => {
+         position = window.scrollY;
+        console.log(position);
       if (window.scrollY > SCROLL_THRESHOLD) {
+      console.log(window.scrollY);
+
         setBtnCls(DEFAULT_BTN_CLS.replace(" hidden", ""));
       } else {
         setBtnCls(DEFAULT_BTN_CLS + " hidden");
       }
     };
-    window.addEventListener("scroll", handleScroll, { passive: true });
+     setInterval(() => {
+       window.addEventListener("scroll", handleScroll, { passive: true });
+     }, 5000);
     return () => {
       window.removeEventListener("scroll", handleScroll, { passive: true });
     };

@@ -46,7 +46,7 @@ body {
 #anime-cont {
   display: flex;
   align-items: center;
-  color: #ffff;
+  color: #00adf4;
   background: transparent;
   border-radius: 2rem;
   width: fit-content;
@@ -58,18 +58,18 @@ body {
   overflow: hidden;
   z-index: 100;
   animation-duration: 5s;
-  border: solid 1px #ffff;
+  border: solid 1px #00adf4;
 }
 
 #anime-cont::after {
-  background: linear-gradient(90deg, #7c3aed, #ec4899);
+  background: linear-gradient(90deg, #008aff 57%, #185abc);
   content: "";
   position: absolute;
   z-index: -1;
 }
 
 #anime-cont:hover {
-  color: black;
+  color: white;
   cursor: pointer;
   border: solid 1px rgb(102, 44, 202);
 }
@@ -89,4 +89,18 @@ body {
   width: 100%;
   transform: scale3d(1, 1, 1);
   transform-origin: bottom center;
+}
+
+.text-color {
+  color: #00adf4;
+}
+
+.colors {
+  
+  color: #2927b9;
+  color: #00adf4;
+  color: #008aff;
+  color: #1a73e8;
+  color: #185abc;
+  color: #2927b9;
 }
