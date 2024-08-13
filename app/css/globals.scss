@@ -39,15 +39,16 @@ body {
 }
 
 // ====================== Navigation's animation
-.s-pro{
+.s-pro {
   cursor: pointer;
 }
+
 #anime-cont {
   display: flex;
   align-items: center;
-  color: #111010;
+  color: #ffff;
   background: transparent;
-  border-radius: 5px;
+  border-radius: 2rem;
   width: fit-content;
   width: intrinsic;
   width: -moz-max-content;
@@ -57,18 +58,20 @@ body {
   overflow: hidden;
   z-index: 100;
   animation-duration: 5s;
+  border: solid 1px #ffff;
 }
 
 #anime-cont::after {
-  background:linear-gradient(90deg, #7c3aed, #ec4899);
+  background: linear-gradient(90deg, #7c3aed, #ec4899);
   content: "";
   position: absolute;
   z-index: -1;
 }
 
 #anime-cont:hover {
-  color: #fdfdfd;
+  color: black;
   cursor: pointer;
+  border: solid 1px rgb(102, 44, 202);
 }
 
 #anime-cont::after {

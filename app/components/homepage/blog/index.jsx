@@ -36,6 +36,12 @@ function Blog({ blogs }) {
           fontSize={16}
         />
       </div>
+
+      <div className="flex justify-center -translate-y-[1px]">
+        <div className="w-3/4">
+          <div className="h-[1px] bg-gradient-to-r from-transparent via-violet-500 to-transparent  w-full mt-24 mb-0" />
+        </div>
+      </div>
     </div>
   );
 }
