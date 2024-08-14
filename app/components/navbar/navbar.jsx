@@ -1,14 +1,16 @@
 // @flow strict
 import Link from "next/link";
+import { DecoderText } from "../decoder-text";
+import Name from "../homepage/hero-section/name";
 
 
 function Navbar() {
   return (
     <nav className="bg-transparent">
-      <div className="flex items-center justify-between py-5">
+      <div className="flex items-center justify-between pt-3">
         <div className="flex flex-shrink-0 items-center">
-          <Link href="/" className=" text-[#185abc] text-3xl font-bold">
-            Thiago
+          <Link href="/" className=" text-[#2927b9] text-3xl font-bold">
+            <Name />
           </Link>
         </div>
 

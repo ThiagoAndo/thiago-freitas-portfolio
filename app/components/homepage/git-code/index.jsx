@@ -1,21 +1,22 @@
 // @flow strict
-import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa";
-import BlogCard from "./blog-card";
 import GitHubCalendar from "react-github-calendar";
+import AnimationLottie from "../../helper/animation-lottie";
+import experience from "/public/lottie/code.json";
+import Image from "next/image";
 
-function Blog({ blogs }) {
+function GitCode({ blogs }) {
   return (
     <div
-      id="blogs"
+      id="experience"
       className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]"
     >
-      <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20"></div>
-      <div className="flex justify-center -translate-y-[1px]">
-        <div className="w-3/4">
-          <div className="h-[1px] bg-gradient-to-r from-transparent via-violet-500 to-transparent  w-full" />
-        </div>
-      </div>
+      <Image
+        src="/section.svg"
+        alt="Hero"
+        width={1572}
+        height={795}
+        className="absolute top-0 -z-10"
+      />
 
       <div className="flex justify-center my-5 lg:py-8">
         <div className="flex  items-center">
@@ -27,23 +28,33 @@ function Blog({ blogs }) {
         </div>
       </div>
 
-      <div className="flex justify-center  mt-5 lg:mt-12">
-        <GitHubCalendar
-          username="ThiagoAndo"
-          blockSize={15}
-          blockMargin={5}
-          colorScheme="dark"
-          fontSize={16}
-        />
-      </div>
+      <div className="py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 ">
+          <div className="flex justify-center items-start">
+            <div className="w-full h-full">
+              <AnimationLottie animationPath={experience} />
+            </div>
+          </div>
 
-      <div className="flex justify-center -translate-y-[1px]">
-        <div className="w-3/4">
-          <div className="h-[1px] bg-gradient-to-r from-transparent via-violet-500 to-transparent  w-full mt-24 mb-0" />
+          <div>
+            <div className="flex flex-col content-center mt-12">
+              <div>
+                <GitHubCalendar
+                  username="ThiagoAndo"
+                  blockSize={15}
+                  blockMargin={5}
+                  colorScheme="dark"
+                  fontSize={16}
+                  color="#008aff"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      
     </div>
   );
 }
 
-export default Blog;
+export default GitCode;

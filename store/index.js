@@ -48,7 +48,7 @@ const uiSlice = createSlice({
     },
     alterPosition(state, action) {
       if (action.payload.position === 0) {
-        this.reducers.toggleNav();
+        
       }
     },
   },
