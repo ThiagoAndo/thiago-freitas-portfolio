@@ -10,7 +10,9 @@ export default function Name() {
 
   return (
     <span
-      className={`text-[#00adf4] t-name-anime ${anime ? "ta-name-anime" : ""}`}
+      className={`text-xl	  md:text-5xl text-[#00adf4] t-name-anime ${
+        anime ? "ta-name-anime" : ""
+      }`}
     >
       <DecoderText text={"Thiago"} delay={500} />
     </span>

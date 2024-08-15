@@ -1,9 +1,9 @@
 // @flow strict
+import Image from "next/image";
 import GitHubCalendar from "react-github-calendar";
 import AnimationLottie from "../../helper/animation-lottie";
 import experience from "/public/lottie/code.json";
-import Image from "next/image";
-
+import BdAnime from "../../helper/border-animation";
 function GitCode({ blogs }) {
   return (
     <div
@@ -29,30 +29,31 @@ function GitCode({ blogs }) {
       </div>
 
       <div className="py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 ">
-          <div className="flex justify-center items-start">
+        <div className="grid mt-12 md:mt-0 grid-cols-1 lg:grid-cols-3">
+          <div className="flex flex-col justify-center  col-span-2">
+            <BdAnime>
+              <GitHubCalendar
+                username="ThiagoAndo"
+                blockSize={12}
+                blockMargin={5}
+                colorScheme="dark"
+                fontSize={12}
+                color="#008aff"
+              />
+            </BdAnime>
+          </div>
+          <div className="flex mt-24 md:mt-0 items-start">
             <div className="w-full h-full">
               <AnimationLottie animationPath={experience} />
             </div>
           </div>
-
-          <div>
-            <div className="flex flex-col content-center mt-12">
-              <div>
-                <GitHubCalendar
-                  username="ThiagoAndo"
-                  blockSize={15}
-                  blockMargin={5}
-                  colorScheme="dark"
-                  fontSize={16}
-                  color="#008aff"
-                />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
-      
+      <div className="flex justify-center -translate-y-[1px]">
+        <div className="w-3/4">
+          <div className="h-[1px] bg-gradient-to-r from-transparent via-violet-500 to-transparent  w-full mt-24 mb-0" />
+        </div>
+      </div>
     </div>
   );
 }

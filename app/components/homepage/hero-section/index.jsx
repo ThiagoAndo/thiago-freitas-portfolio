@@ -13,7 +13,7 @@ function HeroSection() {
  
    
   return (
-    <section className="relative flex flex-col items-center justify-between py-4 lg:py-12">
+    <section className="relative flex flex-col items-center justify-between py-24 lg:py-20 h-full">
       <Image
         src="/hero.svg"
         alt="Hero"
@@ -23,7 +23,7 @@ function HeroSection() {
       />
 
       <div className="order-2 lg:order-1 flex flex-col items-start justify-center pb-20 md:pb-10 lg:pt-10">
-        <p className="text-3xl  md:text-5xl text-neutral-700 !leading-snug text-center mx-auto font-[900] text-white mt-4">
+        <p className="text-2xl  md:text-5xl text-neutral-700 !leading-snug text-center mx-auto font-[900] text-white mt-4">
           <span className={`text-[#00adf4] t-anime`}>
             <DecoderText text={"THIAGO FREITAS,"} delay={500} />
           </span>
