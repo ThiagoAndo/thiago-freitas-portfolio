@@ -1,12 +1,14 @@
 "use client";
-import { personalData } from "@/utils/data/personal-data";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { DecoderText } from "../../decoder-text";
 export default function Name() {
   const [anime, setAnime] = useState(false);
-  setTimeout(() => {
-    setAnime(true);
-  }, 2700);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setAnime(true);
+    }, 2700);
+  }, []);
 
   return (
     <span

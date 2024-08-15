@@ -1,9 +1,18 @@
 // @flow strict
 import Image from "next/image";
 import GitHubCalendar from "react-github-calendar";
+import BdAnime from "../../helper/border-animation";
+
 import AnimationLottie from "../../helper/animation-lottie";
 import experience from "/public/lottie/code.json";
-import BdAnime from "../../helper/border-animation";
+import coding from "/public/lottie/coding.json";
+import contact from "/public/lottie/contact.json";
+import development from "/public/lottie/development.json";
+import education from "/public/lottie/education.json";
+import js from "/public/lottie/js.json";
+import lotti from "/public/lottie/lotti.json";
+import study from "/public/lottie/study.json";
+
 function GitCode({ blogs }) {
   return (
     <div
@@ -42,9 +51,9 @@ function GitCode({ blogs }) {
               />
             </BdAnime>
           </div>
-          <div className="flex mt-24 md:mt-0 items-start">
+          <div className="flex mt-24 md:mt-0 md:ml-12 items-start">
             <div className="w-full h-full">
-              <AnimationLottie animationPath={experience} />
+              <AnimationLottie animationPath={development} width={"95%"} margin={"0"} />
             </div>
           </div>
         </div>

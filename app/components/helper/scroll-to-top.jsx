@@ -14,9 +14,8 @@ const ScrollToTop = () => {
     let position = 0;
     const handleScroll = () => {
          position = window.scrollY;
-        console.log(position);
+        // console.log(position);
       if (window.scrollY > SCROLL_THRESHOLD) {
-      console.log(window.scrollY);
 
         setBtnCls(DEFAULT_BTN_CLS.replace(" hidden", ""));
       } else {

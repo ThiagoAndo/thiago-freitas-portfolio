@@ -1,17 +1,21 @@
 "use client";
-import { useState } from "react";
-import { motion, useAnimate, stagger } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { personalData } from "@/utils/data/personal-data";
 
 export default function Designation() {
   const [anime, setAnime] = useState(false);
   const [isVis, setIsVis] = useState(false);
-  setTimeout(() => {
-    setIsVis(true);
-  }, 2000);
- setTimeout(() => {
-   setAnime(true);
- }, 2700);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsVis(true);
+    }, 2700);
+    setTimeout(() => {
+      setAnime(true);
+    }, 2700);
+  }, []);
+
   return (
     <motion.span
       initial={{ opacity: 0 }}

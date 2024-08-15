@@ -35,7 +35,7 @@ function HeroSection() {
           <Link
             href={personalData.github}
             target="_blank"
-            className="transition-all text-[#008aff] hover:scale-125 duration-300"
+            className="transition-all text-[#008aff] hover:scale-125 duration-400"
           >
             <BsGithub size={30} />
           </Link>

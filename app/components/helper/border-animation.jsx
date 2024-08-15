@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import style from "./border-animation.module.css";
 
 export default function BdAnime({ children }) {
-    console.log(children)
   const divRef = useRef();
   const [dimensions, setDimensions] = useState({
     width: 0,
@@ -94,7 +93,7 @@ export default function BdAnime({ children }) {
           <motion.path
             d={`M 0 0 h ${dimensions.width} v ${dimensions.height} h -${dimensions.width} v -${dimensions.height}`}
             stroke="#00adf4"
-            strokeWidth="5"
+            strokeWidth="3"
             animate={{
               pathLength: [0, 0.75],
               pathOffset: [0, 0.2],
