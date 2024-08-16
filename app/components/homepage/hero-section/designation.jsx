@@ -20,7 +20,9 @@ export default function Designation() {
     <motion.span
       initial={{ opacity: 0 }}
       animate={{ opacity: isVis && 1 }}
-      className={`text-[#00adf4] t-anime ${anime ? "ta-anime" : ""}`}
+      className={`text-[#00adf4] t-anime ${
+        anime ? "ta-anime text-[#90defd]" : ""
+      }`}
     >
       {personalData.designation + "."}
     </motion.span>

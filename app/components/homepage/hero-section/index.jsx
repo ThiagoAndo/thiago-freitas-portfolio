@@ -2,6 +2,7 @@
 import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
 import Link from "next/link";
+
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
@@ -13,7 +14,7 @@ function HeroSection() {
  
    
   return (
-    <section className="relative flex flex-col items-center justify-between py-24 lg:py-20 h-full">
+    <section className="relative flex flex-col items-center justify-between py-24  2xl:py-48 h-full">
       <Image
         src="/hero.svg"
         alt="Hero"
@@ -35,35 +36,35 @@ function HeroSection() {
           <Link
             href={personalData.github}
             target="_blank"
-            className="transition-all text-[#008aff] hover:scale-125 duration-400"
+            className="transition-all text-[#00adf4] hover:scale-125 duration-400"
           >
             <BsGithub size={30} />
           </Link>
           <Link
             href={personalData.linkedIn}
             target="_blank"
-            className="transition-all text-[#008aff] hover:scale-125 duration-300"
+            className="transition-all text-[#00adf4] hover:scale-125 duration-300"
           >
             <BsLinkedin size={30} />
           </Link>
           <Link
             href={personalData.facebook}
             target="_blank"
-            className="transition-all text-[#008aff] hover:scale-125 duration-300"
+            className="transition-all text-[#00adf4] hover:scale-125 duration-300"
           >
             <FaFacebook size={30} />
           </Link>
           <Link
             href={personalData.leetcode}
             target="_blank"
-            className="transition-all text-[#008aff] hover:scale-125 duration-300"
+            className="transition-all text-[#00adf4] hover:scale-125 duration-300"
           >
             <SiLeetcode size={30} />
           </Link>
           <Link
             href={personalData.twitter}
             target="_blank"
-            className="transition-all text-[#008aff] hover:scale-125 duration-300"
+            className="transition-all text-[#00adf4] hover:scale-125 duration-300"
           >
             <FaTwitterSquare size={30} />
           </Link>
@@ -96,3 +97,7 @@ function HeroSection() {
 }
 
 export default HeroSection;
+
+
+
+

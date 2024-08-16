@@ -51,7 +51,7 @@ function GitCode({ blogs }) {
               />
             </BdAnime>
           </div>
-          <div className="flex   md:ml-12 items-start">
+          <div className="flex  mt-24 md:ml-12  md:mt-0 items-start">
             <div className="w-full h-full">
               <AnimationLottie
                 animationPath={development}
