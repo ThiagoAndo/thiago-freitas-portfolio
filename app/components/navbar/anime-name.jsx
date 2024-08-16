@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
-import { DecoderText } from "../../decoder-text";
-export default function Name() {
+import { DecoderText } from "../decoder-text";
+export default function AnimeName() {
   const [anime, setAnime] = useState(false);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ export default function Name() {
 
   return (
     <span
-      className={`text-l	  md:text-3xl text-[#00adf4] t-name-anime ${
+      className={`text-l md:text-3xl text-[#00adf4] t-name-anime ${
         anime ? "ta-name-anime" : ""
       }`}
     >

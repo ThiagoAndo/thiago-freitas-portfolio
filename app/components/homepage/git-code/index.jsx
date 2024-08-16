@@ -39,7 +39,7 @@ function GitCode({ blogs }) {
 
       <div className="py-8">
         <div className="grid mt-12 md:mt-0 grid-cols-1 lg:grid-cols-3">
-          <div className="flex flex-col justify-center  col-span-2">
+          <div className="flex flex-col justify-center mt-16 col-span-2">
             <BdAnime>
               <GitHubCalendar
                 username="ThiagoAndo"
@@ -51,7 +51,7 @@ function GitCode({ blogs }) {
               />
             </BdAnime>
           </div>
-          <div className="flex mt-24 md:mt-0 md:ml-12 items-start">
+          <div className="flex   md:ml-12 items-start">
             <div className="w-full h-full">
               <AnimationLottie
                 animationPath={development}
