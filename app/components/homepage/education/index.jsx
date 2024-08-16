@@ -43,7 +43,8 @@ function Education() {
               <AnimationLottie
                 animationPath={js}
                 width={"150%"}
-                margin={"-86px"}
+                max={"-86px"}
+                min={"-35px"}
               />
             </div>
           </div>

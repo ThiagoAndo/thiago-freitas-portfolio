@@ -28,7 +28,7 @@ function HeroSection() {
             <DecoderText text={"THIAGO FREITAS,"} delay={500} />
           </span>
         </p>
-        <h1 className="text-3xl  md:text-6xl text-neutral-700 !leading-snug text-center mx-auto font-[900] text-white mt-6">
+        <h1 className="text-2xl  md:text-6xl text-neutral-700 !leading-snug text-center mx-auto font-[900] text-white mt-6">
           <Designation />
         </h1>
         <div className="my-12 flex items-center gap-5 m-auto">

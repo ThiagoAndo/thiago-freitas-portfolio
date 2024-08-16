@@ -1,36 +1,29 @@
 "use client";
-import { useMediaQuery } from "@uidotdev/usehooks";
 import Lottie from "lottie-react";
 
+import useMediaScreen from "@/app/hooks/useMediaQuery";
 
+const AnimationLottie = ({ animationPath, width, min, max }) => {
+  const { match: medium } = useMediaScreen(
+    "(min-width : 769px) and (max-width : 992px)"
+  );
+  const { match: large } = useMediaScreen(
+    "(min-width : 993px) and (max-width : 1200px)"
+  );
+  const { match: extraLarge } = useMediaScreen("(min-width : 1201px)");
 
-const AnimationLottie = ({ animationPath, width ,margin}) => {
-    const medium = useMediaQuery(
-      "only screen and (min-width : 769px) and (max-width : 992px)"
-    );
-    const large = useMediaQuery(
-      "only screen and (min-width : 993px) and (max-width : 1200px)"
-    );
-    const extraLarge = useMediaQuery(
-      "only screen and (min-width : 1201px)"
-    );
-let isBig =false;
-if (width && margin){
-  isBig = medium || large || extraLarge; 
-}
+  const isBig = medium || large || extraLarge;
   const defaultOptions = {
     loop: true,
     autoplay: true,
     animationData: animationPath,
     style: {
-      width:  width ,
-      marginLeft: isBig === true ? margin : "-40px",
+      width: width,
+      marginLeft: isBig === true ? max : min,
     },
   };
 
-  return (
-    <Lottie {...defaultOptions} />
-  );
+  return <Lottie {...defaultOptions} />;
 };
 
 export default AnimationLottie;

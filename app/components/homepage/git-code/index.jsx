@@ -53,7 +53,12 @@ function GitCode({ blogs }) {
           </div>
           <div className="flex mt-24 md:mt-0 md:ml-12 items-start">
             <div className="w-full h-full">
-              <AnimationLottie animationPath={development} width={"95%"} margin={"0"} />
+              <AnimationLottie
+                animationPath={development}
+                width={"95%"}
+                min={"0"}
+                max={"0"}
+              />
             </div>
           </div>
         </div>

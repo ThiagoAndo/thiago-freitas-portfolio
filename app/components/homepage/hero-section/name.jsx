@@ -12,7 +12,7 @@ export default function Name() {
 
   return (
     <span
-      className={`text-xl	  md:text-3xl text-[#00adf4] t-name-anime ${
+      className={`text-l	  md:text-3xl text-[#00adf4] t-name-anime ${
         anime ? "ta-name-anime" : ""
       }`}
     >
