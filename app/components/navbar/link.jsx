@@ -24,7 +24,7 @@ export default function NavLink() {
 
       transition: {
         duration: 2,
-        staggerChildren: 0.3,
+        staggerChildren: 0.2,
       },
     },
   };
@@ -72,7 +72,7 @@ export default function NavLink() {
                 href={item.param}
               >
                 <motion.div
-                  whileHover={{ scale: 1.2, color: " #008aff" }}
+                  whileHover={{ scale: 1.2, color: " #00adf4" }}
                   transition={{ type: "spring" }}
                   className="text-sm text-white"
                 >

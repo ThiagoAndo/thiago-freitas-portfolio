@@ -10,11 +10,36 @@ import { RiContactsFill } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
 import Designation from "./designation";
 import { DecoderText } from "../../decoder-text";
+import { motion } from "framer-motion";
+
+const linkCont = [
+  { data: personalData.github, ico: <BsGithub size={30} /> },
+  { data: personalData.linkedIn, ico: <BsLinkedin size={30} /> },
+  { data: personalData.facebook, ico: <FaFacebook size={30} /> },
+  { data: personalData.leetcode, ico: <SiLeetcode size={30} /> },
+  { data: personalData.twitter, ico: <FaTwitterSquare size={30} /> },
+];
+
+const ThisLink = ({ data, children }) => (
+  <motion.div
+    style={{ color: "#008aff" }}
+    whileHover={{
+      scale: 1.2,
+      color: "#2927b9",
+      transition: {
+        type: "spring",
+      },
+    }}
+  >
+    <Link href={data} target="_blank">
+      {children}
+    </Link>
+  </motion.div>
+);
+
 function HeroSection() {
- 
-   
   return (
-    <section className="relative flex flex-col items-center justify-between py-48  lg:py-20 2xl:py-48 h-full">
+    <section className="relative flex flex-col items-center justify-between py-48  lg:py-48 2xl:py-48 h-full">
       <Image
         src="/hero.svg"
         alt="Hero"
@@ -33,41 +58,11 @@ function HeroSection() {
           <Designation />
         </h1>
         <div className="my-12 flex items-center gap-5 m-auto">
-          <Link
-            href={personalData.github}
-            target="_blank"
-            className="transition-all text-[#00adf4] hover:scale-125 duration-400"
-          >
-            <BsGithub size={30} />
-          </Link>
-          <Link
-            href={personalData.linkedIn}
-            target="_blank"
-            className="transition-all text-[#00adf4] hover:scale-125 duration-300"
-          >
-            <BsLinkedin size={30} />
-          </Link>
-          <Link
-            href={personalData.facebook}
-            target="_blank"
-            className="transition-all text-[#00adf4] hover:scale-125 duration-300"
-          >
-            <FaFacebook size={30} />
-          </Link>
-          <Link
-            href={personalData.leetcode}
-            target="_blank"
-            className="transition-all text-[#00adf4] hover:scale-125 duration-300"
-          >
-            <SiLeetcode size={30} />
-          </Link>
-          <Link
-            href={personalData.twitter}
-            target="_blank"
-            className="transition-all text-[#00adf4] hover:scale-125 duration-300"
-          >
-            <FaTwitterSquare size={30} />
-          </Link>
+          {linkCont.map((cont) => (
+            <ThisLink key={cont.data} data={cont.data}>
+              {cont.ico}
+            </ThisLink>
+          ))}
         </div>
 
         <div className="flex items-center gap-6 m-auto">
@@ -97,7 +92,3 @@ function HeroSection() {
 }
 
 export default HeroSection;
-
-
-
-

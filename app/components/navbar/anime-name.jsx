@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { DecoderText } from "../decoder-text";
 import style from "./anime-name.module.css";
 export default function AnimeName() {
@@ -12,12 +13,13 @@ export default function AnimeName() {
   }, []);
 
   return (
-    <span
-      className={`text-lg md:text-3xl text-[#00adf4] ${style["t-name-anime"]} ${
+    <motion.span
+      whileHover={{ color: "#008aff", transition: { duration: 0.001 } }}
+      className={`text-lg md:text-3xl text-white ${style["t-name-anime"]} ${
         anime ? style["ta-name-anime"] : ""
       }`}
     >
       <DecoderText text={"Thiago"} delay={500} />
-    </span>
+    </motion.span>
   );
 }
