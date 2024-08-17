@@ -8,9 +8,6 @@ import HeroSection from "../homepage/hero-section";
 import Projects from "../homepage/projects";
 import Skills from "../homepage/skills";
 import GitCode from "../homepage/git-code";
-import { Suspense, lazy } from "react";
-import { DisplacementSphere } from "../sphere-vertex.jsx/displacement-sphere";
-
 
 export default function Structure() {
   const position = useSelector((state) => state.position);
@@ -22,7 +19,6 @@ export default function Structure() {
 
   return (
     <>
-        <DisplacementSphere />
       <HeroSection />
       <AboutSection />
       <Skills />

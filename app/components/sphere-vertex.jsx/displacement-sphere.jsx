@@ -1,3 +1,5 @@
+"use client"
+
 import { Transition } from "../transition";
 import { useReducedMotion, useSpring } from "framer-motion";
 import { useInViewport } from "@/app/hooks/useInViewport";

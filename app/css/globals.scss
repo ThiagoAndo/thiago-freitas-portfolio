@@ -98,24 +98,11 @@ body {
 .t-anime {
   padding: 0.5rem;
   border-radius: 0.5rem;
-  background: linear-gradient(135deg, #2927b9, #2927b9, #662cca) 0 100% /
+  background: linear-gradient(135deg, #00adf4, #00adf4, #662cca) 0 100% /
     var(--d, 0) no-repeat;
   transition: 0.7s;
 }
 
-.t-name-anime {
-  padding: 0.5rem;
-  background: linear-gradient(45deg, #2927b9, #2927b9, #2927b9, #662cca) 0 100% /
-    var(--d, 0) 4px no-repeat;
-  transition: 0.7s;
-}
-.ta-anime {
-  border: solid 1px #662cca;
-  --d: 100%;
-}
-.ta-name-anime {
-  --d: 100%;
-}
 .colors {
   color: #90defd;
 
