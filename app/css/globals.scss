@@ -62,7 +62,7 @@ body {
 }
 
 #anime-cont::after {
-  background: linear-gradient(135deg, #2927b9,#2927b9,#2927b9, #662cca);
+  background: linear-gradient(135deg, #2927b9, #2927b9, #2927b9, #662cca);
   content: "";
   position: absolute;
   z-index: -1;
@@ -98,15 +98,15 @@ body {
 .t-anime {
   padding: 0.5rem;
   border-radius: 0.5rem;
-  background: linear-gradient(135deg, #2927b9, #2927b9 , #662cca) 0 100% / var(--d, 0)
-  no-repeat;
+  background: linear-gradient(135deg, #2927b9, #2927b9, #662cca) 0 100% /
+    var(--d, 0) no-repeat;
   transition: 0.7s;
 }
 
 .t-name-anime {
-  padding: .5rem;
-  background: linear-gradient(45deg, #2927b9 , #2927b9 , #2927b9 , #662cca) 0 100% / var(--d, 0) 4px
-  no-repeat;
+  padding: 0.5rem;
+  background: linear-gradient(45deg, #2927b9, #2927b9, #2927b9, #662cca) 0 100% /
+    var(--d, 0) 4px no-repeat;
   transition: 0.7s;
 }
 .ta-anime {
@@ -125,4 +125,3 @@ body {
   color: #185abc;
   color: #2927b9;
 }
-

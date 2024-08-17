@@ -1,0 +1,9 @@
+.canvas {
+  position: absolute;
+  width: 100vw;
+  transition-property: opacity;
+  transition-duration: 3s;
+  transition-timing-function: var(--bezierFastoutSlowin);
+
+
+}

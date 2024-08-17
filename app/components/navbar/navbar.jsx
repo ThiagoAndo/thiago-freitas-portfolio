@@ -8,13 +8,13 @@ function Navbar() {
   return (
     <MotionNav>
       <div className="flex items-center justify-between pt-3 md:h-20">
+        <div>
+          <NavLink />
+        </div>
         <div className="flex flex-shrink-0 items-center">
           <Link href="/" className=" text-[#2927b9] text-3xl font-bold">
             <AnimeName />
           </Link>
-        </div>
-        <div>
-          <NavLink />
         </div>
       </div>
     </MotionNav>

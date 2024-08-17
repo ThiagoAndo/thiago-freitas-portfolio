@@ -8,6 +8,10 @@ import HeroSection from "../homepage/hero-section";
 import Projects from "../homepage/projects";
 import Skills from "../homepage/skills";
 import GitCode from "../homepage/git-code";
+import { Suspense, lazy } from "react";
+import { DisplacementSphere } from "../sphere-vertex.jsx/displacement-sphere";
+
+
 export default function Structure() {
   const position = useSelector((state) => state.position);
   const navbar = useSelector((state) => state.navbar);
@@ -15,12 +19,10 @@ export default function Structure() {
   function click() {
     dispatch(uiActions.alterPosition({ position: 0 }));
   }
-  console.log(position);
-  console.log("position");
-  console.log(navbar);
-  console.log("navbar");
+
   return (
     <>
+        <DisplacementSphere />
       <HeroSection />
       <AboutSection />
       <Skills />

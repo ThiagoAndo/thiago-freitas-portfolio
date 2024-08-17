@@ -14,7 +14,7 @@ function HeroSection() {
  
    
   return (
-    <section className="relative flex flex-col items-center justify-between py-24  2xl:py-48 h-full">
+    <section className="relative flex flex-col items-center justify-between py-24 lg:py-20 2xl:py-48 h-full">
       <Image
         src="/hero.svg"
         alt="Hero"

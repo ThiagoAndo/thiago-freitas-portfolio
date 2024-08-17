@@ -2,20 +2,27 @@ const path = require('path')
  
 module.exports = {
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
+    includePaths: [path.join(__dirname, "styles")],
   },
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'res.cloudinary.com',
-        pathname: '**',
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        pathname: "**",
       },
       {
-        protocol: 'https',
-        hostname: 'media.dev.to',
-        pathname: '**',
+        protocol: "https",
+        hostname: "media.dev.to",
+        pathname: "**",
       },
     ],
   },
-}
+  rules: [
+    {
+      test: /\.(glsl|vs|fs|vert|frag)$/,
+      exclude: /node_modules/,
+      use: ["raw-loader", "glslify-loader"],
+    },
+  ],
+};
