@@ -1,24 +1,13 @@
 // @flow strict
-import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
 import Link from "next/link";
-
-import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
-import { SiLeetcode } from "react-icons/si";
+import linkChildren from "./hero-childrens";
 import Designation from "./designation";
 import { DecoderText } from "../../decoder-text";
-import { motion } from "framer-motion";
 import UiLinks from "../../ui/UiLinks";
-const linkCont = [
-  { data: personalData.github, ico: <BsGithub size={30} /> },
-  { data: personalData.linkedIn, ico: <BsLinkedin size={30} /> },
-  { data: personalData.facebook, ico: <FaFacebook size={30} /> },
-  { data: personalData.leetcode, ico: <SiLeetcode size={30} /> },
-  { data: personalData.twitter, ico: <FaTwitterSquare size={30} /> },
-];
+import Btns from "./btn-hero";
 
 function HeroSection() {
   return (
@@ -40,33 +29,21 @@ function HeroSection() {
           <Designation />
         </h1>
         <div className="my-12 flex items-center gap-5 m-auto">
-          {linkCont.map((cont) => (
+          {linkChildren.map((cont) => (
             <UiLinks key={cont.data} http={cont.data}>
               {cont.ico}
             </UiLinks>
           ))}
         </div>
-
         <div className="flex items-center gap-6 m-auto">
-          <Link href="#contact">
-            <button
-              id="anime-cont"
-              className="px-3 text-xs md:px-8 py-3 md:py-4 bg-[#0d1224] rounded-full border-none text-center md:text-sm font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out  md:font-semibold flex items-center gap-1"
-            >
-              <span>Contact me</span>
-              <RiContactsFill size={16} />
-            </button>
-          </Link>
-
-          <Link href="#contact">
-            <button
-              id="anime-cont"
-              className="px-3 text-xs md:px-8 py-3 md:py-4 bg-[#0d1224] rounded-full border-none text-center md:text-sm font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out  md:font-semibold flex items-center gap-1"
-            >
-              <span>Get Resume</span>
-              <MdDownload size={16} />
-            </button>
-          </Link>
+          <Btns>
+            <span>Contact me</span>
+            <RiContactsFill size={16} />
+          </Btns>
+          <Btns>
+            <span>Get Resume</span>
+            <MdDownload size={16} />
+          </Btns>
         </div>
       </div>
     </section>

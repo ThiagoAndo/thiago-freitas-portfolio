@@ -1,9 +1,7 @@
 // @flow strict
 import Link from "next/link";
-import { CgGitFork } from "react-icons/cg";
-import { IoStar } from "react-icons/io5";
-import UiLinks from "./ui/UiLinks";
-const childrens = [ {chdr: (<><CgGitFork /><span>Git</span></>)},{ chdr: (<><IoStar /><span>Star</span></>)}];
+import footerChildrens from "./footer-childrens";
+import UiLinks from "../ui/UiLinks";
 
 function Footer() {
   return (
@@ -20,7 +18,7 @@ function Footer() {
             </Link>
           </p>
           <div className="flex items-center gap-5">
-            {childrens.map(({ chdr }, i) => (
+            {footerChildrens.map(({ chdr }, i) => (
               <UiLinks
                 key={i}
                 http={"#"}

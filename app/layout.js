@@ -2,7 +2,7 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Footer from "./components/footer";
+import Footer from "./components/footer/footer";
 import Navbar from "./components/navbar/navbar";
 import "./css/card.scss";
 import "./css/globals.scss";
