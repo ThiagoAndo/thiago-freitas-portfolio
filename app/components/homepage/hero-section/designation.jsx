@@ -13,7 +13,7 @@ export default function Designation() {
     }, 2700);
     setTimeout(() => {
       setAnime(true);
-    }, 2700);
+    }, 2500);
   }, []);
 
   return (

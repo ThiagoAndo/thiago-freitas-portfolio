@@ -11,8 +11,6 @@ import ReduxProvider from "@/store/provider";
 import { DisplacementSphere } from "./components/sphere-vertex.jsx/displacement-sphere";
 const inter = Inter({ subsets: ["latin"] });
 
-
-
 export const metadata = {
   title: "Portfolio of Thiago Freitas- Software Developer",
   description:
@@ -20,14 +18,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-
   return (
     <html lang="en">
       <body className={inter.className}>
         <DisplacementSphere />
-
         <ToastContainer />
-        <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
+        <main className="overflow-hidden  md:w-full  min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-full xl:max-w-full  2xl:max-w-full text-white ">
           <Navbar />
           <ReduxProvider> {children}</ReduxProvider>
           <ScrollToTop />

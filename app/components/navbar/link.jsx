@@ -47,7 +47,7 @@ export default function NavLink() {
   useEffect(() => {
     setTimeout(() => {
       setAnime(true);
-    }, 3500);
+    }, 3000);
   }, []);
 
   return (
