@@ -11,7 +11,7 @@ import { SiLeetcode } from "react-icons/si";
 import Designation from "./designation";
 import { DecoderText } from "../../decoder-text";
 import { motion } from "framer-motion";
-
+import UiLinks from "../../ui/Links";
 const linkCont = [
   { data: personalData.github, ico: <BsGithub size={30} /> },
   { data: personalData.linkedIn, ico: <BsLinkedin size={30} /> },
@@ -19,23 +19,6 @@ const linkCont = [
   { data: personalData.leetcode, ico: <SiLeetcode size={30} /> },
   { data: personalData.twitter, ico: <FaTwitterSquare size={30} /> },
 ];
-
-const ThisLink = ({ data, children }) => (
-  <motion.div
-    style={{ color: "#008aff" }}
-    whileHover={{
-      scale: 1.2,
-      color: "#2927b9",
-      transition: {
-        type: "spring",
-      },
-    }}
-  >
-    <Link href={data} target="_blank">
-      {children}
-    </Link>
-  </motion.div>
-);
 
 function HeroSection() {
   return (
@@ -59,9 +42,9 @@ function HeroSection() {
         </h1>
         <div className="my-12 flex items-center gap-5 m-auto">
           {linkCont.map((cont) => (
-            <ThisLink key={cont.data} data={cont.data}>
+            <UiLinks key={cont.data} http={cont.data}>
               {cont.ico}
-            </ThisLink>
+            </UiLinks>
           ))}
         </div>
 
