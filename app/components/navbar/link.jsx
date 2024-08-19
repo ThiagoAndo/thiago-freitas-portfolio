@@ -10,45 +10,45 @@ const navContent = [
   { param: "/#education", txt: "EDUCATION" },
   { param: "/#experience", txt: "EXPERIENCE" },
 ];
+const frameVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+
+    transition: {
+      duration: 2,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    scale: 0,
+  },
+  visible: {
+    opacity: 1,
+    scale: [0.8, 1.3, 1],
+
+    transition: {
+      duration: 0.1,
+    },
+  },
+};
 
 export default function NavLink() {
   const [anime, setAnime] = useState(false);
   const { match: small } = useMediaScreen(" (max-width : 480px)");
 
-  const frameVariants = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-
-      transition: {
-        duration: 2,
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: {
-      opacity: 0,
-      scale: 0,
-    },
-    visible: {
-      opacity: small === true ? 0 : 1,
-      scale: [0.8, 1.3, 1],
-
-      transition: {
-        duration: 0.1,
-      },
-    },
-  };
-
-  useEffect(() => {
-    setTimeout(() => {
-      setAnime(true);
-    }, 3000);
-  }, []);
+  (itemVariants.visible.opacity = small === true ? 0 : 1),
+    useEffect(() => {
+      setTimeout(() => {
+        setAnime(true);
+      }, 3000);
+    }, []);
 
   return (
     <>

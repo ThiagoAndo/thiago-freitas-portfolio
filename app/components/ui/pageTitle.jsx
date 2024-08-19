@@ -20,7 +20,7 @@ export default function Title({ children, image = true, side = false }) {
         <div className="flex justify-center my-5 lg:py-8">
           <div className="flex  items-center">
             <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-            <span className="bg-[#1a1443] w-fit text-[#00adf4] font-bold p-2 px-5 text-xl rounded-md">
+            <span className="flex flex-row bg-[#1a1443] w-fit text-[#00adf4] font-bold p-2 px-5 text-xl rounded-md">
               {children}
             </span>
             <span className="w-24 h-[2px] bg-[#1a1443]"></span>

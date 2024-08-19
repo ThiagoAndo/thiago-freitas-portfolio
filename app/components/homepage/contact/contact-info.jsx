@@ -14,7 +14,7 @@ export default function Info() {
     return (
       <p key={item.data} className="text-sm md:text-xl flex items-center gap-3">
         <item.comp
-          className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
+          className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#00adf4] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
           size={36}
         />
         <span>{personalData[item.data]}</span>
