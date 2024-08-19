@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import useMediaScreen from "@/app/hooks/useMediaQuery";
 
 const navContent = [
   { param: "/#about", txt: " ABOUT" },
@@ -10,7 +9,7 @@ const navContent = [
   { param: "/#education", txt: "EDUCATION" },
   { param: "/#experience", txt: "EXPERIENCE" },
 ];
-const frameVariants = {
+ export const frameVariants = {
   hidden: {
     opacity: 0,
   },
@@ -24,7 +23,7 @@ const frameVariants = {
   },
 };
 
-const itemVariants = {
+export const itemVariants = {
   hidden: {
     opacity: 0,
     scale: 0,
@@ -41,9 +40,7 @@ const itemVariants = {
 
 export default function NavLink() {
   const [anime, setAnime] = useState(false);
-  const { match: small } = useMediaScreen(" (max-width : 480px)");
 
-  (itemVariants.visible.opacity = small === true ? 0 : 1),
     useEffect(() => {
       setTimeout(() => {
         setAnime(true);
@@ -54,7 +51,7 @@ export default function NavLink() {
     <>
       {anime && (
         <motion.ul
-          className="mt-4 flex h-screen max-h-0 w-full flex-col items-start text-sm opacity-0 md:mt-0 md:h-auto md:max-h-screen md:w-auto md:flex-row md:space-x-1 md:border-0 md:opacity-100"
+          className="mt-4 hidden md:flex h-screen max-h-0 w-full flex-col items-start text-sm opacity-0 md:mt-0 md:h-auto md:max-h-screen md:w-auto md:flex-row md:space-x-1 md:border-0 md:opacity-100"
           variants={frameVariants}
           initial="hidden"
           animate="visible"
