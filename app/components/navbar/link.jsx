@@ -9,7 +9,7 @@ const navContent = [
   { param: "/#education", txt: "EDUCATION" },
   { param: "/#experience", txt: "EXPERIENCE" },
 ];
- export const frameVariants = {
+ const frameVariants = {
   hidden: {
     opacity: 0,
   },
@@ -23,17 +23,18 @@ const navContent = [
   },
 };
 
-export const itemVariants = {
+ const itemVariants = {
   hidden: {
     opacity: 0,
     scale: 0,
   },
   visible: {
     opacity: 1,
-    scale: [0.8, 1.3, 1],
+    scale: [0.8, 1.5, 1],
 
     transition: {
-      duration: 0.1,
+      duration: 1,
+      type: "spring",
     },
   },
 };
@@ -41,11 +42,11 @@ export const itemVariants = {
 export default function NavLink() {
   const [anime, setAnime] = useState(false);
 
-    useEffect(() => {
-      setTimeout(() => {
-        setAnime(true);
-      }, 3000);
-    }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setAnime(true);
+    }, 3000);
+  }, []);
 
   return (
     <>
