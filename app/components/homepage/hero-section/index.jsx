@@ -18,6 +18,7 @@ function HeroSection() {
         width={1572}
         height={795}
         className="absolute -top-[98px] -z-10"
+        style={{zIndex:"-6000"}}
       />
       <div className="order-2 lg:order-1 flex flex-col items-start justify-center pb-20 md:pb-10 lg:pt-10">
         <p className="text-2xl my-2 md:text-5xl text-neutral-700 !leading-snug text-center mx-auto font-[900] text-white mt-4">

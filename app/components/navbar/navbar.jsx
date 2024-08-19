@@ -11,7 +11,7 @@ function Navbar() {
         <div>
           <NavLink />
         </div>
-        <div className="flex flex-shrink-0 items-center">
+        <div className="flex items-center">
           <Link href="/" className=" text-[#2927b9] text-3xl font-bold">
             <AnimeName />
           </Link>

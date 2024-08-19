@@ -6,4 +6,5 @@
   transition-property: opacity;
   transition-duration: 3s;
   transition-timing-function: var(--bezierFastoutSlowin);
+  z-index: -5000;
 }

@@ -12,7 +12,7 @@ export default function MotionNav({ children }) {
 
   const navZ = useTransform(
     scrollY,
-    [0, 200],
+    [0, 300],
     ["3000", "-3000"]
   );
 
