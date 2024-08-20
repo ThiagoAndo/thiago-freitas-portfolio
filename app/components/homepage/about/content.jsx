@@ -4,23 +4,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import Title from "../../ui/pageTitle";
 import { personalData } from "@/utils/data/personal-data";
 import TextAnime from "../../ui/anime-text";
-import { frameVariants, itemVariants } from "../../navbar/link";
-import { isValidEmail } from "@/utils/check-email";
-import { Bounce } from "react-toastify";
+import useDalay from "@/app/hooks/useDelay";
+ const anime = { scale: [0, 0.3, 0.6, 0.9, 1.2, 1], opacity: 1 };
+ const end = { x: 500, opacity: 0 };
+ const time = { duration: 0.6, type: "spring", bounce: 0.2 };
 export default function About() {
   const { ref: des, inView: desV } = useInView({
-    threshold: 0.7,
+    threshold: 0.6,
   });
-  // const { ref: fot, inView: fotV } = useInView({
-  //   threshold: 0.5,
-  // });
-  console.log(`DESCRIPTION ${desV}`);
-  // console.log(`FOTO ${fotV}`);
-
+console.log("is on the screen" + desV)
+  const isTime = useDalay(desV && 1200);
   const init = { scale: 15, opacity: 0 };
-  const anime = { scale: [0, 0.3, 0.6, 0.9, 1.2, 1], opacity: 1 };
-  const end = { x: 500, opacity: 0 };
-  const time = { duration: 0.6, type: "spring", bounce: 0.2 };
+ 
   return (
     <motion.section
       id="about"
@@ -28,7 +23,7 @@ export default function About() {
       className="my-6 lg:my-6 relative"
       ref={des}
     >
-      <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20"></div>
+      <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20 "></div>
       <AnimatePresence>
         {desV && (
           <motion.div
@@ -36,10 +31,10 @@ export default function About() {
             animate={anime}
             exit={end}
             transition={time}
-            className="flex justify-center order-2 lg:order-2"
+            className="flex justify-center order-2 lg:order-2 md:py-20"
           >
             <Title side={true}>
-              <TextAnime txt={"ABOUT ME"} showTxt={desV} />
+              {isTime && <TextAnime txt={"ABOUT ME"} showTxt={desV} />}
             </Title>
             <div
               id="container"
@@ -47,7 +42,7 @@ export default function About() {
             >
               <motion.div className="order-1 lg:order-1">
                 <div className="mb-5  text-[#00adf4] font-bold text-xl uppercase">
-                  <TextAnime txt={"Who I am?"} showTxt={des} />
+                  {isTime && <TextAnime txt={"Who I am?"} showTxt={des} />}
                 </div>
                 <p className=" mb-20 md:mb-0 text-gray-200 text-justify text-sm lg:text-lg">
                   {personalData.description}

@@ -14,7 +14,7 @@ export default function Title({ children, image = true, side = false }) {
         )}
         <div className="flex justify-center -translate-y-[1px]">
           <div className="w-3/4">
-            <div className="h-[1px] bg-gradient-to-r from-transparent via-violet-500 to-transparent  w-full" />
+            <div className="h-[1px] bg-gradient-to-r from-transparent via-[#185abc] to-transparent  w-full" />
           </div>
         </div>
         <div className="flex justify-center my-5 lg:py-8">
@@ -30,7 +30,7 @@ export default function Title({ children, image = true, side = false }) {
     );
   } else {
     return (
-      <div className="hidden lg:flex flex-col items-center absolute top-16 -right-8">
+      <div className="hidden lg:flex flex-col items-center absolute top-36 -right-8">
         <span className="bg-[#1a1443] w-fit  text-[#00adf4] font-bold rotate-90 p-2 px-5 text-xl rounded-md">
           {children}
         </span>
