@@ -10,10 +10,10 @@ export default function Designation() {
   useEffect(() => {
     setTimeout(() => {
       setIsVis(true);
-    }, 2700);
+    }, 2300);
     setTimeout(() => {
       setAnime(true);
-    }, 2500);
+    }, 2100);
   }, []);
 
   return (

@@ -5,17 +5,14 @@ import Title from "../../ui/pageTitle";
 import { personalData } from "@/utils/data/personal-data";
 import TextAnime from "../../ui/anime-text";
 import useDalay from "@/app/hooks/useDelay";
- const anime = { scale: [0, 0.3, 0.6, 0.9, 1.2, 1], opacity: 1 };
- const end = { x: 500, opacity: 0 };
- const time = { duration: 0.6, type: "spring", bounce: 0.2 };
+import {scaleAnime} from "@/utils/Framer-motion-Variants";
 export default function About() {
   const { ref: des, inView: desV } = useInView({
     threshold: 0.6,
   });
-console.log("is on the screen" + desV)
+  console.log("is on the screen" + desV);
   const isTime = useDalay(desV && 1200);
-  const init = { scale: 15, opacity: 0 };
- 
+
   return (
     <motion.section
       id="about"
@@ -27,10 +24,10 @@ console.log("is on the screen" + desV)
       <AnimatePresence>
         {desV && (
           <motion.div
-            initial={init}
-            animate={anime}
-            exit={end}
-            transition={time}
+            initial={scaleAnime.init}
+            animate={scaleAnime.anime}
+            exit={scaleAnime.end}
+            transition={scaleAnime.time}
             className="flex justify-center order-2 lg:order-2 md:py-20"
           >
             <Title side={true}>

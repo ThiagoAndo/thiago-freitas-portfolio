@@ -1,6 +1,6 @@
 // @flow strict
 import Link from "next/link";
-import NavLink from "./link";
+import NavLink from "./anime-links";
 import AnimeName from "./anime-name";
 import MotionNav from "./motion-nav";
 

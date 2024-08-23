@@ -9,7 +9,7 @@ export default function AnimeName() {
   useEffect(() => {
     setTimeout(() => {
       setAnime(true);
-    }, 2700);
+    }, 2300);
   }, []);
 
   return (

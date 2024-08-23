@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-
+import { staggerChildren } from "@/utils/Framer-motion-Variants";
 const navContent = [
   { param: "/#about", txt: " ABOUT" },
   { param: "/#skills", txt: "SKILLS" },
@@ -45,7 +45,7 @@ export default function NavLink() {
   useEffect(() => {
     setTimeout(() => {
       setAnime(true);
-    }, 3000);
+    }, 2300);
   }, []);
 
   return (
@@ -53,7 +53,7 @@ export default function NavLink() {
       {anime && (
         <motion.ul
           className="mt-4 hidden md:flex h-screen max-h-0 w-full flex-col items-start text-sm opacity-0 md:mt-0 md:h-auto md:max-h-screen md:w-auto md:flex-row md:space-x-1 md:border-0 md:opacity-100"
-          variants={frameVariants}
+          variants={staggerChildren.framer}
           initial="hidden"
           animate="visible"
           transition={{ type: "spring" }}
@@ -61,7 +61,7 @@ export default function NavLink() {
           {navContent.map((item) => (
             <motion.li
               className="block px-4 py-2 no-underline outline-none hover:no-underline"
-              variants={itemVariants}
+              variants={staggerChildren.items}
               transition={{ type: "spring" }}
               key={`item-${item.txt}`}
             >
