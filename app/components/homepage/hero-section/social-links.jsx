@@ -8,7 +8,7 @@ import { RiContactsFill } from "react-icons/ri";
 import Btns from "./btn-hero";
 import { MdDownload } from "react-icons/md";
 
-import { staggerChildren } from "@/utils/Framer-motion-Variants";
+import { staggerChildren } from "@/utils/framer-motion-Variants";
 
 export default function SocialLinks() {
   const [isVis, setIsVis] = useState(false);

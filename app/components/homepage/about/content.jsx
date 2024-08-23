@@ -5,7 +5,7 @@ import Title from "../../ui/pageTitle";
 import { personalData } from "@/utils/data/personal-data";
 import TextAnime from "../../ui/anime-text";
 import useDalay from "@/app/hooks/useDelay";
-import {scaleAnime} from "@/utils/Framer-motion-Variants";
+import { scaleAnime } from "@/utils/framer-motion-Variants";
 export default function About() {
   const { ref: des, inView: desV } = useInView({
     threshold: 0.6,

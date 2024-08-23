@@ -1,5 +1,5 @@
 export const scaleAnime = {
-  init: { scale: 15, opacity: 0 },
+  init: { scale: 0, opacity: 0 },
   anime: { scale: [0, 0.3, 0.6, 0.9, 1.2, 1], opacity: 1 },
   end: { x: 500, opacity: 0 },
   time: { duration: 0.6, type: "spring", bounce: 0.2 },

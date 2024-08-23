@@ -1,10 +1,11 @@
-"use client"
-
+"use client";
+import { AnimatePresence, motion } from "framer-motion";
+import { scaleAnime } from "@/utils/framer-motion-Variants";
 import { Transition } from "../transition";
 import { useReducedMotion, useSpring } from "framer-motion";
 import { useInViewport } from "@/app/hooks/useInViewport";
 import { useWindowSize } from "@/app/hooks/useWindowSize";
-import { startTransition, useEffect, useRef } from "react";
+import { startTransition, useEffect, useRef, useState } from "react";
 import {
   AmbientLight,
   DirectionalLight,
@@ -36,6 +37,8 @@ const springConfig = {
 };
 
 export const DisplacementSphere = (props) => {
+  const [isVis, setIsVis] = useState(false);
+
   const lights = useRef();
   const start = useRef(Date.now());
   const canvasRef = useRef();
@@ -52,6 +55,13 @@ export const DisplacementSphere = (props) => {
   const windowSize = useWindowSize();
   const rotationX = useSpring(0, springConfig);
   const rotationY = useSpring(0, springConfig);
+  useEffect(() => {
+    const time = setTimeout(() => {
+      setIsVis(true);
+    }, 3000);
+
+    return () => clearTimeout(time);
+  }, []);
 
   useEffect(() => {
     const { innerWidth, innerHeight } = window;
@@ -101,7 +111,7 @@ export const DisplacementSphere = (props) => {
       cleanScene(scene.current);
       cleanRenderer(renderer.current);
     };
-  }, []);
+  }, [isVis]);
 
   useEffect(() => {
     const { width, height } = windowSize;
@@ -126,7 +136,7 @@ export const DisplacementSphere = (props) => {
       sphere.current.position.x = 22;
       sphere.current.position.y = 16;
     }
-  }, [reduceMotion, windowSize]);
+  }, [reduceMotion, windowSize, isVis]);
 
   useEffect(() => {
     const dirLight = new DirectionalLight(0xffffff, 2.0);
@@ -142,7 +152,7 @@ export const DisplacementSphere = (props) => {
     return () => {
       removeLights(lights.current);
     };
-  }, []);
+  }, [isVis]);
 
   useEffect(() => {
     const onMouseMove = throttle((event) => {
@@ -162,7 +172,7 @@ export const DisplacementSphere = (props) => {
     return () => {
       window.removeEventListener("mousemove", onMouseMove);
     };
-  }, [isInViewport, reduceMotion, rotationX, rotationY]);
+  }, [isInViewport, reduceMotion, rotationX, rotationY, isVis]);
 
   useEffect(() => {
     let animation;
@@ -190,19 +200,27 @@ export const DisplacementSphere = (props) => {
     return () => {
       cancelAnimationFrame(animation);
     };
-  }, [isInViewport, reduceMotion, rotationX, rotationY]);
+  }, [isInViewport, reduceMotion, rotationX, rotationY, isVis]);
+  console.log("is vis " + isVis);
 
   return (
-    <Transition in timeout={3000} nodeRef={canvasRef}>
-      {({ visible, nodeRef }) => (
-        <canvas
-          aria-hidden
-          className={styles.canvas}
-          data-visible={visible}
-          ref={nodeRef}
-          {...props}
-        />
+    <AnimatePresence>
+      {isVis && (
+        <Transition in timeout={3000} nodeRef={canvasRef}>
+          {({ visible, nodeRef }) => (
+            <motion.canvas
+              initial={{ opacity: 0, x: 210, y: -210 }}
+              animate={{ x: 0, y: 0, opacity: 1 }}
+              transition={{ duration: 1.5, type: "spring", bounce: 0.2 }}
+              aria-hidden
+              className={styles.canvas}
+              data-visible={visible}
+              ref={nodeRef}
+              {...props}
+            />
+          )}
+        </Transition>
       )}
-    </Transition>
+    </AnimatePresence>
   );
 };

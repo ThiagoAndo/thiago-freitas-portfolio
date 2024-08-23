@@ -2,14 +2,14 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { staggerChildren } from "@/utils/Framer-motion-Variants";
+import { staggerChildren } from "@/utils/framer-motion-Variants";
 const navContent = [
   { param: "/#about", txt: " ABOUT" },
   { param: "/#skills", txt: "SKILLS" },
   { param: "/#education", txt: "EDUCATION" },
   { param: "/#experience", txt: "EXPERIENCE" },
 ];
- const frameVariants = {
+const frameVariants = {
   hidden: {
     opacity: 0,
   },
@@ -23,7 +23,7 @@ const navContent = [
   },
 };
 
- const itemVariants = {
+const itemVariants = {
   hidden: {
     opacity: 0,
     scale: 0,
