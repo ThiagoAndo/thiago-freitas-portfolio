@@ -19,7 +19,7 @@ console.log("is on the screen" + desV)
   return (
     <motion.section
       id="about"
-      style={{ minHeight: "20rem" }}
+      style={{ minHeight: "28.75rem" }}
       className="my-6 lg:my-6 relative"
       ref={des}
     >
