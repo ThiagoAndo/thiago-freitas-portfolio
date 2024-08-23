@@ -6,7 +6,7 @@ import { DecoderText } from "../../decoder-text";
 
 function HeroSection() {
   return (
-    <section className="relative flex flex-col items-center justify-between py-48  lg:py-48 2xl:py-48 h-full">
+    <section className="relative flex flex-col items-center justify-between py-36 h-full">
       <Image
         src="/hero.svg"
         alt="Hero"

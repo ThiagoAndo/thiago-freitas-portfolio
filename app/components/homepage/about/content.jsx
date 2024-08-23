@@ -42,7 +42,22 @@ export default function About() {
                   {isTime && <TextAnime txt={"Who I am?"} showTxt={des} />}
                 </div>
                 <p className=" mb-20 md:mb-0 text-gray-200 text-justify text-sm lg:text-lg">
-                  {personalData.description}
+                  My name is Thiago Freitas, and I am a professional and
+                  enthusiastic programmer. I am a self-driven, quick starter
+                  with a passion for programming and a curious mind that thrives
+                  on solving complex and challenging real-world problems. As a
+                  lifelong learner, I love to explore and master new
+                  technologies.
+                  <br />
+                  I am deeply interested in all aspects of web application
+                  development, with a core focus on JavaScript, which I use
+                  extensively in my work. Through comprehensive exposure to
+                  foundational concepts and applying them across various
+                  projects, my love for web development has only grown.
+                  <br />
+                  I am passionate about building and implementing
+                  algorithms to address real-world challenges. I am open to any
+                  job opportunities that align with my skills and interests.
                 </p>
               </motion.div>
               <motion.div className="flex justify-center order-2 lg:order-2">

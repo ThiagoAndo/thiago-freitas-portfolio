@@ -8,7 +8,7 @@ import "./css/card.scss";
 import "./css/globals.scss";
 import ScrollToTop from "./components/helper/scroll-to-top";
 import ReduxProvider from "@/store/provider";
-import { DisplacementSphere } from "./components/sphere-vertex.jsx/displacement-sphere";
+import { DisplacementSphere } from "./components/sphere-vertex/displacement-sphere";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
