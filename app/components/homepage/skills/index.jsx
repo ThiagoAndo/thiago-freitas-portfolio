@@ -5,15 +5,24 @@ import { skillsImage } from "@/utils/skill-image";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import Title from "../../ui/pageTitle";
+import TextAnime from "../../ui/anime-text";
+import { useInView } from "react-intersection-observer";
 
 function Skills() {
+  const { ref: des, inView: desV } = useInView({
+    threshold: 0.2,
+  });
   return (
     <div
       id="skills"
       className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]"
+      ref={des}
     >
       <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20"></div>
-      <Title image={false}>Skills</Title>
+
+      <Title image={false}>
+        {desV && <TextAnime txt={"SKILLS"} showTxt={desV} />}
+      </Title>
 
       <div className="w-full my-12">
         <Marquee

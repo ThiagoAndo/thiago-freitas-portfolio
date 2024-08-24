@@ -72,159 +72,162 @@ import vuetifyjs from '/public/svg/skills/vuetifyjs.svg';
 import webix from '/public/svg/skills/webix.svg';
 import wolframalpha from '/public/svg/skills/wolframalpha.svg';
 import wordpress from '/public/svg/skills/wordpress.svg';
+import nodejs from "/public/svg/skills/nodejs.svg";
 
 
 export const skillsImage = (skill) => {
   const skillID = skill.toLowerCase();
   switch (skillID) {
-    case 'gcp':
+    case "gcp":
       return gcp;
-    case 'html':
+    case "html":
       return html;
-    case 'photoshop':
+    case "photoshop":
       return photoshop;
-    case 'docker':
+    case "docker":
       return docker;
-    case 'illustrator':
+    case "illustrator":
       return illustrator;
-    case 'adobe xd':
+    case "adobe xd":
       return adobeXd;
-    case 'after effects':
+    case "after effects":
       return afterEffects;
-    case 'css':
+    case "css":
       return css;
-    case 'angular':
+    case "angular":
       return angular;
-    case 'javascript':
+    case "javascript":
       return javascript;
-    case 'next js':
+    case "next js":
       return nextJS;
-    case 'nuxt js':
+    case "nuxt js":
       return nuxtJS;
-    case 'react':
+    case "react":
       return react;
-    case 'svelte':
+    case "svelte":
       return svelte;
-    case 'typescript':
+    case "typescript":
       return typescript;
-    case 'vue':
+    case "vue":
       return vue;
-    case 'bootstrap':
+    case "bootstrap":
       return bootstrap;
-    case 'bulma':
+    case "bulma":
       return bulma;
-    case 'capacitorjs':
+    case "capacitorjs":
       return capacitorjs;
-    case 'coffeescript':
+    case "coffeescript":
       return coffeescript;
-    case 'memsql':
+    case "memsql":
       return memsql;
-    case 'mongodb':
+    case "mongodb":
       return mongoDB;
-    case 'mysql':
+    case "mysql":
       return mysql;
-    case 'postgresql':
+    case "postgresql":
       return postgresql;
-    case 'tailwind':
+    case "tailwind":
       return tailwind;
-    case 'vitejs':
+    case "vitejs":
       return vitejs;
-    case 'vuetifyjs':
+    case "vuetifyjs":
       return vuetifyjs;
-    case 'c':
+    case "c":
       return c;
-    case 'c++':
+    case "c++":
       return cplusplus;
-    case 'c#':
+    case "c#":
       return csharp;
-    case 'dart':
+    case "dart":
       return dart;
-    case 'go':
+    case "go":
       return go;
-    case 'java':
+    case "java":
       return java;
-    case 'kotlin':
+    case "kotlin":
       return kotlin;
-    case 'julia':
+    case "julia":
       return julia;
-    case 'matlab':
+    case "matlab":
       return matlab;
-    case 'php':
+    case "php":
       return php;
-    case 'python':
+    case "python":
       return python;
-    case 'ruby':
+    case "ruby":
       return ruby;
-    case 'swift':
+    case "swift":
       return swift;
-    case 'adobe audition':
+    case "adobe audition":
       return adobeaudition;
-    case 'aws':
+    case "aws":
       return aws;
-    case 'deno':
+    case "deno":
       return deno;
-    case 'django':
+    case "django":
       return django;
-    case 'firebase':
+    case "firebase":
       return firebase;
-    case 'gimp':
+    case "gimp":
       return gimp;
-    case 'git':
+    case "git":
       return git;
-    case 'graphql':
+    case "graphql":
       return graphql;
-    case 'lightroom':
+    case "lightroom":
       return lightroom;
-    case 'materialui':
+    case "materialui":
       return materialui;
-    case 'nginx':
+    case "nginx":
       return nginx;
-    case 'numpy':
+    case "numpy":
       return numpy;
-    case 'opencv':
+    case "opencv":
       return opencv;
-    case 'premiere pro':
+    case "premiere pro":
       return premierepro;
-    case 'pytorch':
+    case "pytorch":
       return pytorch;
-    case 'selenium':
+    case "selenium":
       return selenium;
-    case 'strapi':
+    case "strapi":
       return strapi;
-    case 'tensorflow':
+    case "tensorflow":
       return tensorflow;
-    case 'webix':
+    case "webix":
       return webix;
-    case 'wordpress':
+    case "wordpress":
       return wordpress;
-    case 'azure':
+    case "azure":
       return azure;
-    case 'blender':
+    case "blender":
       return blender;
-    case 'fastify':
+    case "fastify":
       return fastify;
-    case 'figma':
+    case "figma":
       return figma;
-    case 'flutter':
+    case "flutter":
       return flutter;
-    case 'haxe':
+    case "haxe":
       return haxe;
-    case 'ionic':
+    case "ionic":
       return ionic;
-    case 'markdown':
+    case "markdown":
       return markdown;
-    case 'microsoft office':
+    case "microsoft office":
       return microsoftoffice;
-    case 'picsart':
+    case "picsart":
       return picsart;
-    case 'sketch':
+    case "sketch":
       return sketch;
-    case 'unity':
+    case "unity":
       return unity;
-    case 'wolframalpha':
+    case "wolframalpha":
       return wolframalpha;
-    case 'canva':
+    case "canva":
       return canva;
+    case "node js":
+      return nodejs;
     default:
       break;
   }
