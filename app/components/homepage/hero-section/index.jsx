@@ -3,10 +3,10 @@ import Image from "next/image";
 import SocialLinks from "./social-links";
 import Designation from "./designation";
 import { DecoderText } from "../../decoder-text";
-
+import Container from "../../ui/Container";
 function HeroSection() {
   return (
-    <section className="relative flex flex-col items-center justify-between py-36 h-full">
+    <Container tailwind="relative flex flex-col items-center justify-between pt-56 pb-36 md:py-40 2xlpy-48 h-full">
       <Image
         src="/hero.svg"
         alt="Hero"
@@ -25,9 +25,8 @@ function HeroSection() {
           <Designation />
         </h1>
         <SocialLinks />
-     
       </div>
-    </section>
+    </Container>
   );
 }
 

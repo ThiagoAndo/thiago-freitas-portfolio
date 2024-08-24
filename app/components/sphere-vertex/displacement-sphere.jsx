@@ -201,7 +201,6 @@ export const DisplacementSphere = (props) => {
       cancelAnimationFrame(animation);
     };
   }, [isInViewport, reduceMotion, rotationX, rotationY, isVis]);
-  console.log("is vis " + isVis);
 
   return (
     <AnimatePresence>
@@ -209,9 +208,9 @@ export const DisplacementSphere = (props) => {
         <Transition in timeout={3000} nodeRef={canvasRef}>
           {({ visible, nodeRef }) => (
             <motion.canvas
-              initial={{ opacity: 0, x: 210, y: -210 }}
-              animate={{ x: 0, y: 0, opacity: 1 }}
-              transition={{ duration: 1.5, type: "spring", bounce: 0.2 }}
+              initial={{ opacity: 0, }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.5, type: "spring", bounce: 0.5 }}
               aria-hidden
               className={styles.canvas}
               data-visible={visible}

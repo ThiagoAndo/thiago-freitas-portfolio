@@ -22,7 +22,7 @@ function useMediaScreen(min_max) {
     };
   }, []);
 
-  return { match };
+  return  match ;
 }
 
 export default useMediaScreen;

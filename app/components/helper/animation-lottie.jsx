@@ -1,6 +1,6 @@
 "use client";
 import Lottie from "lottie-react";
-import useMediaScreen from "@/app/hooks/useMediaQuery";
+import useMediaScreen from "@/app/hooks/useMediaScreen";
 
 const AnimationLottie = ({ animationPath, width, min, max }) => {
   const { match: medium } = useMediaScreen(
