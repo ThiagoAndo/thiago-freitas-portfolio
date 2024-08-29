@@ -11,7 +11,7 @@ function ContactSection() {
       id={"contact"}
     >
       <Title side={true}>CONTACT</Title>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+      <div className="grid md:pt-24 grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         <ContactWithoutCaptcha />
         <div className="lg:w-3/4 ">
           <div className="flex flex-col gap-5 lg:gap-9">

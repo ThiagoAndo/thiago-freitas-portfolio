@@ -1,7 +1,7 @@
 // @flow strict
 import Link from "next/link";
 import footerChildrens from "./footer-childrens";
-import UiLinks from "../ui/UiLinks";
+import UiLinks from "../homepage/hero-section/UiLinks";
 
 function Footer() {
   return (
