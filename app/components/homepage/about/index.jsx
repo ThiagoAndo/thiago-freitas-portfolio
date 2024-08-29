@@ -42,7 +42,7 @@ function AboutSection() {
                 <TextAnime txt={"ABOUT ME"} showTxt={desV} />
               </Title>
             ) : (
-              <p> </p>
+              <p style={{ color: "transparent" }}>ABOUT ME </p>
             )}
             <div
               id="container"
@@ -50,11 +50,7 @@ function AboutSection() {
             >
               <motion.div className="order-1 lg:order-1">
                 <div className="mb-5  text-[#00adf4] font-bold  text-base 2xl:text-xl uppercase">
-                  {isTime === true ? (
-                    <TextAnime txt={"Who I am?"} showTxt={desV} />
-                  ) : (
-                    <p style={{ color: "transparent" }}>Who I am?</p> //Style purpose
-                  )}
+                    <TextAnime txt={"WHO I AM ?"} showTxt={isTime} />
                 </div>
                 <p className=" mb-8 md:mb-0 text-gray-200 text-justify text-base 2xl:text-xl">
                   My name is Thiago Freitas, and I am a professional and

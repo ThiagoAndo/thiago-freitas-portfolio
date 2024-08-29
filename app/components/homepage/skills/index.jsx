@@ -11,7 +11,7 @@ import PageSection from "../../ui/section";
 
 function Skills() {
   const { ref: des, inView: desV } = useInView({
-    threshold: 0.7,
+    threshold: 0.3,
   });
   return (
     <PageSection
@@ -20,9 +20,8 @@ function Skills() {
       ref={des}
     >
       <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20"></div>
-
-      <Title image={false}>
-        {desV && <TextAnime txt={"SKILLS"} showTxt={desV} />}
+      <Title side={false}>
+        <TextAnime txt={"SKILLS"} showTxt={desV} />
       </Title>
 
       <div className="w-full my-12">

@@ -1,5 +1,4 @@
 // @flow strict
-import Image from "next/image";
 import GitHubCalendar from "react-github-calendar";
 import BdAnime from "../../helper/border-animation";
 import Title from "../../ui/pageTitle";

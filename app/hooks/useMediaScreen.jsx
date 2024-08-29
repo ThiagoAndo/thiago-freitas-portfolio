@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 
 function useMediaScreen(min_max) {
@@ -22,7 +21,7 @@ function useMediaScreen(min_max) {
     };
   }, []);
 
-  return  match ;
+  return { match };
 }
 
 export default useMediaScreen;
