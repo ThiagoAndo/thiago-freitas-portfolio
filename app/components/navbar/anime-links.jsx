@@ -72,7 +72,7 @@ export default function NavLink() {
                 <motion.div
                   whileHover={{ scale: 1.2, color: " #00adf4" }}
                   transition={{ type: "spring" }}
-                  className="text-sm text-white"
+                  className="text-base font-medium text-[#008aff]"
                 >
                   {item.txt}
                 </motion.div>

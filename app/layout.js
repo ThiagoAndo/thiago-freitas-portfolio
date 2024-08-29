@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <DisplacementSphere /> */}
+        <DisplacementSphere />
         <ToastContainer />
         <main className="overflow-hidden  md:w-full  min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-full xl:max-w-full  2xl:max-w-full text-white">
           <Navbar />

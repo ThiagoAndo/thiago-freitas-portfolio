@@ -14,7 +14,7 @@ export default function AnimeName() {
 
   return (
     <motion.span
-      whileHover={{ color: "#008aff", transition: { duration: 0.001 } }}
+      whileHover={{ color: "#00adf4", transition: { duration: 0.001 } }}
       className={`text-lg md:text-3xl text-white ${style["t-name-anime"]} ${
         anime ? style["ta-name-anime"] : ""
       }`}

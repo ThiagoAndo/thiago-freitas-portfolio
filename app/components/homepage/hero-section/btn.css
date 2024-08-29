@@ -13,11 +13,11 @@
   overflow: hidden;
   z-index: 100;
   animation-duration: 5s;
-  border: solid 1px #00adf4;
+  border: solid 2px #00adf4;
 }
 
 .anime-cont::after {
-  background: linear-gradient(135deg, #2927b9, #2927b9, #2927b9, #662cca);
+  background: linear-gradient(135deg, #00adf4, #00adf4, #00adf4, #662cca);
   content: "";
   position: absolute;
   z-index: -1;
@@ -26,7 +26,7 @@
 .anime-cont:hover {
   color: white;
   cursor: pointer;
-  border: solid 1px rgb(102, 44, 202);
+  border: solid 2px rgb(102, 44, 202);
 }
 
 .anime-cont::after {

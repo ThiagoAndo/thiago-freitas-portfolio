@@ -7,11 +7,11 @@ import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
 import js from "/public/lottie/js.json";
 import Title from "../../ui/pageTitle";
+import PageSection from "../../ui/section";
 function Education() {
   return (
-    <div
-      id="education"
-      className="relative z-50 md:border-t md:border-[#25213b] my-12 lg:my-24"
+    <PageSection
+      id={"education"}
     >
       <Title>EDUCATION</Title>
 
@@ -68,7 +68,7 @@ function Education() {
           </div>
         </div>
       </div>
-    </div>
+    </PageSection>
   );
 }
 

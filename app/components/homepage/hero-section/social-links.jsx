@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import UiLinks from "../../ui/UiLinks";
+import UiLinks from "./UiLinks";
 import linkChildren from "../../ui/hero-childrens";
 import { RiContactsFill } from "react-icons/ri";
 import Btns from "./btn-hero";

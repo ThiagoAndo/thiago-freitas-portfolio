@@ -6,10 +6,10 @@ export default function UiLinks({ http, children, style, isMotion =true }) {
   if (isMotion) {
     return (
       <motion.div
-        style={{ color: "#008aff" }}
+        className="text-[#008aff]"
         whileHover={{
           scale: 1.2,
-          color: "#2927b9",
+          color: "#00adf4",
           transition: {
             type: "spring",
           },

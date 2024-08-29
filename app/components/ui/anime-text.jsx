@@ -10,6 +10,7 @@ export default function TextAnime({ txt }) {
             <motion.p
               style={letter === "." ? { color: `transparent` } : {}}
               initial={{ opacity: 0, rotateY: 0 }}
+            className="text-lg md:text-2xl"
               animate={{
                 opacity: 1,
                 rotateY: [90, 180, 260, 360, 90, 180, 260, 0],
