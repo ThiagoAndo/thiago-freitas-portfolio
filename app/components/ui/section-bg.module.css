@@ -1,0 +1,23 @@
+.bg {
+  height: 80%;
+  margin-top: 1.5%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.84);
+  position: absolute;
+  border-radius: 15px;
+  z-index: -1000;
+}
+
+@media only screen and (max-width: 1300px) {
+  .bg {
+    height: 80%;
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .bg {
+    height: 90%;
+    margin-top: -5%;
+  }
+}

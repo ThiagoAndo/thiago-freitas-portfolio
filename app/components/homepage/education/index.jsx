@@ -11,7 +11,7 @@ function Education() {
   return (
     <div
       id="education"
-      className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]"
+      className="relative z-50 md:border-t md:border-[#25213b] my-12 lg:my-24"
     >
       <Title>EDUCATION</Title>
 

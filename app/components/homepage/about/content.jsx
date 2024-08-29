@@ -6,20 +6,28 @@ import { personalData } from "@/utils/data/personal-data";
 import TextAnime from "../../ui/anime-text";
 import useDalay from "@/app/hooks/useDelay";
 import { scaleAnime } from "@/utils/framer-motion-Variants";
+import useMediaScreen from "@/app/hooks/useMediaScreen";
+import Bg from "../../ui/section-bg";
+import PageSection from "../../ui/section";
+import { forwardRef, useRef } from "react";
 
 export default function About() {
   const { ref: des, inView: desV } = useInView({
-    threshold: 0.3,
+    threshold: 0.4,
   });
   const isTime = useDalay(desV && 1200);
+  let size = useMediaScreen(
+    "only screen and (min-width : 369px) and (max-width : 500px)"
+  );
 
   return (
-    <section
+    <PageSection
       id="about"
-      className="my-6 lg:my-6 relative pt-28"
-      style={{ height: "100vh" }}
+      tailwind={"my-6 lg:my-6 relative pt-28"}
+      stl={{ height: size === true ? "170vh" : "90vh" }}
       ref={des}
     >
+      {desV && <Bg />}
       <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20 "></div>
       <AnimatePresence>
         {desV && (
@@ -28,18 +36,29 @@ export default function About() {
             animate={scaleAnime.anime}
             exit={scaleAnime.end}
             transition={scaleAnime.time}
-            className="relative flex justify-center order-2 lg:order-2 md:py-20"
+            className="relative p-6  flex justify-center order-2 lg:order-2 md:py-20"
           >
-            <Title side={true}>
-              {isTime && <TextAnime txt={"ABOUT ME"} showTxt={desV} />}
-            </Title>
+            {isTime === true ? (
+              <Title side={true}>
+                <TextAnime txt={"ABOUT ME"} showTxt={desV} />
+              </Title>
+            ) : (
+              <p> </p>
+            )}
             <div
               id="container"
               className="grid pb-12 grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16"
             >
               <motion.div className="order-1 lg:order-1">
                 <div className="mb-5  text-[#00adf4] font-bold  text-base 2xl:text-xl uppercase">
-                  {isTime && <TextAnime txt={"Who I am?"} showTxt={des} />}
+                  {isTime && <TextAnime txt={"Who I am?"} />}
+                  {isTime === true ? (
+                    <Title side={true}>
+                      <TextAnime txt={"Who I am?"} showTxt={desV} />
+                    </Title>
+                  ) : (
+                    <p style={{ color: "transparent" }}>Who I am?</p> //Style purpose
+                  )}
                 </div>
                 <p className=" mb-8 md:mb-0 text-gray-200 text-justify text-base 2xl:text-xl">
                   My name is Thiago Freitas, and I am a professional and
@@ -72,6 +91,6 @@ export default function About() {
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+    </PageSection>
   );
 }

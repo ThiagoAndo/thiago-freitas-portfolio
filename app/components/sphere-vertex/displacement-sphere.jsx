@@ -1,6 +1,10 @@
 "use client";
-import { AnimatePresence, motion } from "framer-motion";
-import { scaleAnime } from "@/utils/framer-motion-Variants";
+import {
+  AnimatePresence,
+  motion,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import { Transition } from "../transition";
 import { useReducedMotion, useSpring } from "framer-motion";
 import { useInViewport } from "@/app/hooks/useInViewport";
@@ -38,7 +42,14 @@ const springConfig = {
 
 export const DisplacementSphere = (props) => {
   const [isVis, setIsVis] = useState(false);
+    // const { scrollY } = useScroll();
+    // const navOpc = useTransform(
+    //   scrollY,
+    //   [0, 90, 120, 170, 210, 270],
+    //   ["1", "0.9", "0.8", "0.7", "0.5", "0.18"]
+    // );
 
+ 
   const lights = useRef();
   const start = useRef(Date.now());
   const canvasRef = useRef();
@@ -208,7 +219,10 @@ export const DisplacementSphere = (props) => {
         <Transition in timeout={3000} nodeRef={canvasRef}>
           {({ visible, nodeRef }) => (
             <motion.canvas
-              initial={{ opacity: 0, }}
+              // style={{
+              //   opacity: navOpc,
+              // }}
+              initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.5, type: "spring", bounce: 0.5 }}
               aria-hidden

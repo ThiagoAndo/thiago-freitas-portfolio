@@ -1,11 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion";
-export default function TextAnime({ txt, showTxt }) {
+export default function TextAnime({ txt }) {
   let msg = txt.replaceAll(" ", ".");
   msg = msg.split("");
   return (
     <AnimatePresence>
       <div style={{ display: `flex`, flexDirection: "row" }}>
-        {showTxt &&
+        {
           msg.map((letter, i) => (
             <motion.p
               style={letter === "." ? { color: `transparent` } : {}}

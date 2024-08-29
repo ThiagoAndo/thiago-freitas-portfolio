@@ -13,9 +13,6 @@ export default function Container({
     "only screen and (min-width : 369px) and (max-width : 500px)"
   );
 
-  console.log("size");
-  console.log(size === true ? "0vh" : "20vh");
-
   return (
     <>
       <section

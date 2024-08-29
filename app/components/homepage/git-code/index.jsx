@@ -3,7 +3,7 @@ import Image from "next/image";
 import GitHubCalendar from "react-github-calendar";
 import BdAnime from "../../helper/border-animation";
 import Title from "../../ui/pageTitle";
-
+import PageSection from "../../ui/section";
 import AnimationLottie from "../../helper/animation-lottie";
 import experience from "/public/lottie/code.json";
 import coding from "/public/lottie/coding.json";
@@ -16,9 +16,8 @@ import study from "/public/lottie/study.json";
 
 function GitCode() {
   return (
-    <div
+    <PageSection
       id="experience"
-      className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]"
     >
       <Title>DAYS I CODE</Title>
 
@@ -48,8 +47,7 @@ function GitCode() {
           </div>
         </div>
       </div>
-  
-    </div>
+    </PageSection>
   );
 }
 

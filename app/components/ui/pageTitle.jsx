@@ -12,9 +12,9 @@ export default function Title({ children, image = true, side = false }) {
             className="absolute top-0 -z-10"
           />
         )}
-        <div className="flex justify-center -translate-y-[1px]">
+        <div className="hidden md:flex justify-center -translate-y-[1px]">
           <div className="w-3/4">
-            <div className="h-[1px] bg-gradient-to-r from-transparent via-[#185abc] to-transparent  w-full" />
+            <div className="h-[1px] bg-gradient-to-r from-transparent via-[#00adf4] to-transparent  w-full" />
           </div>
         </div>
         <div className="flex justify-center my-5 lg:py-8">

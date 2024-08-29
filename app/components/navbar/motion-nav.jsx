@@ -1,7 +1,5 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useState } from "react";
-
 export default function MotionNav({ children }) {
   const { scrollY } = useScroll();
   const navOpc = useTransform(
@@ -12,17 +10,19 @@ export default function MotionNav({ children }) {
 
   const navZ = useTransform(
     scrollY,
-    [0, 300],
-    ["3000", "-3000"]
+    [0, 30, 60, 100, 170, 200],
+    [true, true, true, false, false, false]
   );
 
+  console.log(typeof navZ.current);
   return (
     <motion.nav
       style={{
+        // scale: navZ.current && 0.5, //This retrives the value from useTransform
         position: "fixed",
         width: "90%",
         opacity: navOpc,
-        zIndex: navZ,
+        zIndex:'1000'
       }}
       className="bg-transparent"
     >
