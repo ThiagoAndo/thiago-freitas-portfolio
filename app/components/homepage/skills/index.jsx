@@ -11,12 +11,12 @@ import PageSection from "../../ui/section";
 
 function Skills() {
   const { ref: des, inView: desV } = useInView({
-    threshold: 0.2,
+    threshold: 0.7,
   });
   return (
     <PageSection
       id={"skills"}
-      tailwind={"z-50 md:border-t md:border-[#25213b] my-20 lg:my-24"}
+      tailwind={"z-50 md:border-t md:border-[#25213b] my-20 lg:my-48"}
       ref={des}
     >
       <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20"></div>
