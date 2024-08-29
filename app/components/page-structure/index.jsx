@@ -14,7 +14,7 @@ export default function Structure() {
       <HeroSection />
       <AboutSection />
       <Skills />
-      <Projects />
+      {/* <Projects /> */}
       <Education />
       <GitCode />
       <ContactSection />
