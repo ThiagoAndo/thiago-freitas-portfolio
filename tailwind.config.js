@@ -31,7 +31,8 @@ module.exports = {
       },
 
       fontFamily: {
-        roboto: ["Rock Salt", "cursive"],
+        rock: ["Rock Salt", "cursive"],
+        roboto: ["Roboto",'sans-serif'],
       },
     },
   },
