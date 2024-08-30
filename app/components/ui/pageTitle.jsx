@@ -4,13 +4,15 @@ export default function Title({ children, image = true, side = false }) {
     return (
       <>
         {image && (
-          <Image
-            src="/section.svg"
-            alt="Hero"
-            width={1572}
-            height={795}
-            className="absolute top-0 -z-10"
-          />
+          <div className="">
+            <Image
+              src="/section.svg"
+              alt="Hero"
+              width={1572}
+              height={795}
+              className="hero-color absolute top-0 -z-10"
+            />
+          </div>
         )}
         <div className="hidden md:flex justify-center -translate-y-[1px]">
           <div className="w-3/4">
