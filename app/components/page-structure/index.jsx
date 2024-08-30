@@ -7,7 +7,6 @@ import HeroSection from "../homepage/hero-section";
 import Projects from "../homepage/projects";
 import Skills from "../homepage/skills";
 import GitCode from "../homepage/git-code";
-
 export default function Structure() {
   return (
     <>

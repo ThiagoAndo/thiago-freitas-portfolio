@@ -4,17 +4,16 @@ export default function MotionNav({ children }) {
   const { scrollY } = useScroll();
   const navOpc = useTransform(
     scrollY,
-    [0, 30, 60, 100, 170, 200],
+    [0, 30, 60, 100, 135, 170],
     ["1", "0.8", "0.6", "0.4", "0.2", "0"]
   );
 
-  const navZ = useTransform(
-    scrollY,
-    [0, 30, 60, 100, 170, 200],
-    [true, true, true, false, false, false]
-  );
+  // const navZ = useTransform(
+  //   scrollY,
+  //   [0, 30, 60, 100, 170, 200],
+  //   [true, true, true, false, false, false]
+  // );
 
-  console.log(typeof navZ.current);
   return (
     <motion.nav
       style={{
@@ -24,7 +23,7 @@ export default function MotionNav({ children }) {
         opacity: navOpc,
         zIndex:'1000'
       }}
-      className="bg-transparent"
+      className="mt-6 bg-transparent"
     >
       {children}
     </motion.nav>

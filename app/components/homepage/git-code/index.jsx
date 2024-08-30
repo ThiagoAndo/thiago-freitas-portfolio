@@ -15,9 +15,7 @@ import study from "/public/lottie/study.json";
 
 function GitCode() {
   return (
-    <PageSection
-      id="experience"
-    >
+    <PageSection id="experience">
       <Title>DAYS I CODE</Title>
 
       <div className="py-8">

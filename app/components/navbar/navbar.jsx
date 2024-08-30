@@ -1,8 +1,9 @@
 // @flow strict
 import Link from "next/link";
 import NavLink from "./anime-links";
-import AnimeName from "./anime-name";
+import AnimeName from "./experiment/anime-name";
 import MotionNav from "./motion-nav";
+import { LogoLink } from "../ui/LogoLink";
 
 function Navbar() {
   return (
@@ -12,9 +13,7 @@ function Navbar() {
           <NavLink />
         </div>
         <div className="flex items-center">
-          <Link href="/" className="text-3xl font-bold">
-            <AnimeName />
-          </Link>
+          <LogoLink />
         </div>
       </div>
     </MotionNav>

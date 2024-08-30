@@ -7,9 +7,7 @@ import PageSection from "../../ui/section";
 
 function ContactSection() {
   return (
-    <PageSection
-      id={"contact"}
-    >
+    <PageSection id={"contact"}>
       <Title side={true}>CONTACT</Title>
       <div className="grid md:pt-24 grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         <ContactWithoutCaptcha />

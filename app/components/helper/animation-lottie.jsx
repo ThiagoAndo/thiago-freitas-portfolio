@@ -20,8 +20,7 @@ const AnimationLottie = ({
   );
 
   const isBig = medium || large || extraLarge;
-  console.log(extraLarge);
-  console.log("isBig");
+ 
   const defaultOptions = {
     loop: true,
     autoplay: true,

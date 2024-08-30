@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { DecoderText } from "../decoder-text";
+import { DecoderText } from "../../decoder-text";
 import style from "./anime-name.module.css";
 export default function AnimeName() {
   const [anime, setAnime] = useState(false);

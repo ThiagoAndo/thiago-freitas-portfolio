@@ -12,13 +12,13 @@ import useMediaScreen from "@/app/hooks/useMediaScreen";
 import Bg from "../../ui/section-bg";
 import PageSection from "../../ui/section";
 function AboutSection() {
-    const { ref: des, inView: desV } = useInView({
-      threshold: 0.4,
-    });
-    const isTime = useDalay(desV && 1200);
-    let size = useMediaScreen(
-      "only screen and (min-width : 369px) and (max-width : 500px)"
-    );
+  const { ref: des, inView: desV } = useInView({
+    threshold: 0.4,
+  });
+  const isTime = useDalay(desV && 1200);
+  let size = useMediaScreen(
+    "only screen and (min-width : 369px) and (max-width : 500px)"
+  );
   return (
     <PageSection
       id="about"
@@ -50,7 +50,7 @@ function AboutSection() {
             >
               <motion.div className="order-1 lg:order-1">
                 <div className="mb-5  text-[#00adf4] font-bold  text-base 2xl:text-xl uppercase">
-                    <TextAnime txt={"WHO I AM ?"} showTxt={isTime} />
+                  <TextAnime txt={"WHO I AM ?"} showTxt={isTime} />
                 </div>
                 <p className=" mb-8 md:mb-0 text-gray-200 text-justify text-base 2xl:text-xl">
                   My name is Thiago Freitas, and I am a professional and
