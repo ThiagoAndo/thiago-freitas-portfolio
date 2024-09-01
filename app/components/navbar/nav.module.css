@@ -1,4 +1,9 @@
 .navi{
      position: fixed;
-     width: 90%,
+     background-color: transparent;
+     height: 100vh;
+     z-index: 1000;
+     width: 90px;
+     top: 50px;
 }
+

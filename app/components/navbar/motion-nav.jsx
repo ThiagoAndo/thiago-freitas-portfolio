@@ -1,5 +1,6 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
+import style from "./nav.module.css"
 export default function MotionNav({ children }) {
   const { scrollY } = useScroll();
   const navOpc = useTransform(
@@ -18,12 +19,9 @@ export default function MotionNav({ children }) {
     <motion.nav
       style={{
         // scale: navZ.current && 0.5, //This retrives the value from useTransform
-        position: "fixed",
-        width: "90%",
         opacity: navOpc,
-        zIndex:'1000'
       }}
-      className="mt-6 bg-transparent"
+      className={style.navi}
     >
       {children}
     </motion.nav>
