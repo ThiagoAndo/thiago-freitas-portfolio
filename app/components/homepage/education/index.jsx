@@ -31,7 +31,6 @@ function Education() {
 
           <GlowCard>
             <div className="p-3 w-full h-full md:w-3/4 md:h-3/4 relative text-white">
-             
               <div className="flex justify-center">
                 <p className="text-base  xl:text-1xl text-[#16f2b3]">
                   Jan 2016 - Dec 2017
