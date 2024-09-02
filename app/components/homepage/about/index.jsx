@@ -4,10 +4,10 @@ import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { motion, AnimatePresence } from "framer-motion";
 import Title from "../../ui/pageTitle";
-import { personalData } from "@/utils/data/personal-data";
+import { personalData } from "@/app/data/personal-data";
 import TextAnime from "../../ui/anime-text";
 import useDalay from "@/app/hooks/useDelay";
-import { scaleAnime } from "@/utils/framer-motion-Variants";
+import { scaleAnime } from "@/app/helper/framer-motion-Variants";
 import useMediaScreen from "@/app/hooks/useMediaScreen";
 import Bg from "../../ui/section-bg";
 import PageSection from "../../ui/section";
@@ -16,9 +16,10 @@ function AboutSection() {
     threshold: 0.4,
   });
   const isTime = useDalay(desV && 1200);
-  let size = useMediaScreen(
+  let { match:size } = useMediaScreen(
     "only screen and (min-width : 369px) and (max-width : 500px)"
   );
+
   return (
     <PageSection
       id="about"

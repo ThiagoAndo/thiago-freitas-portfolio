@@ -2,16 +2,15 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "./components/footer/footer";
-import Navbar from "./components/navbar/navbar";
 import "./css/card.scss";
 import "./css/globals.scss";
-import ScrollToTop from "./components/helper/scroll-to-top";
-import ReduxProvider from "@/store/provider";
+import ScrollToTop from "./helper/scroll-to-top";
+import ReduxProvider from "@/app/store/provider";
 import { DisplacementSphere } from "./components/sphere-vertex/displacement-sphere";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
-import theme from "./src/theme";
-
+import theme from "./mui-theme/theme";
+import { LogoLink } from "./components/logo/LogoLink";
 export const metadata = {
   title: "Portfolio of Thiago Freitas- Software Developer",
   description:
@@ -22,10 +21,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={"font-roboto"}>
-        {/* <DisplacementSphere /> */}
+        <DisplacementSphere />
         <ToastContainer />
         <main className="overflow-hidden  md:w-full  min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-full xl:max-w-full  2xl:max-w-full text-white">
-            <Navbar />
+          {/* <LogoLink /> */}
           <AppRouterCacheProvider options={{ enableCssLayer: true }}>
             <ThemeProvider theme={theme}>
               <ReduxProvider> {children}</ReduxProvider>

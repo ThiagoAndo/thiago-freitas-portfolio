@@ -1,6 +1,6 @@
 export const scaleAnime = {
   init: { scale: 0, opacity: 0 },
-  anime: { scale: [ 0.6, 0.9, 1], opacity: 1 },
+  anime: { scale: [0.6, 0.9, 1], opacity: 1 },
   end: { x: 500, opacity: 0 },
   time: { duration: 1.2, type: "spring", bounce: 0.2 },
 };
@@ -23,10 +23,12 @@ export const staggerChildren = {
     hidden: {
       opacity: 0,
       scale: 0,
+      y: -80,
     },
     visible: {
       opacity: 1,
       scale: [0.8, 1.5, 1],
+      y: 0,
 
       transition: {
         duration: 1,

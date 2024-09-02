@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import UiLinks from "./UiLinks";
-import linkChildren from "../../ui/hero-childrens";
 import { RiContactsFill } from "react-icons/ri";
-import Btns from "./btn-hero";
+import { linkChildrens } from "../../../helper/childrens";
 import { MdDownload } from "react-icons/md";
+import UiLinks from "./UiLinks";
+import Btns from "./btn-hero";
 
-import { staggerChildren } from "@/utils/framer-motion-Variants";
+import { staggerChildren } from "@/app/helper/framer-motion-Variants";
 
 export default function SocialLinks() {
   const [isVis, setIsVis] = useState(false);
@@ -30,7 +30,7 @@ export default function SocialLinks() {
             animate="visible"
             className="my-12 flex items-center gap-5 m-auto"
           >
-            {linkChildren.map((cont) => (
+            {linkChildrens.map((cont) => (
               <motion.span
                 variants={staggerChildren.items}
                 transition={{ type: "spring" }}

@@ -1,6 +1,5 @@
-"use client"
+"use client";
 import { useInView } from "react-intersection-observer";
-import AboutSection from "../homepage/about";
 const ViewIntersect = ({ children }) => {
   const { ref, inView, entry } = useInView({
     /* Optional options */
@@ -10,7 +9,7 @@ const ViewIntersect = ({ children }) => {
     // trackVisibility: true,
     // delay: 1000,
   });
-  console.log(`Header inside viewport ${inView } .`);
+  console.log(`Header inside viewport ${inView} .`);
   return <div ref={ref}>{children}</div>;
 };
 

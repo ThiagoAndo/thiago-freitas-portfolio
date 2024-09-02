@@ -1,4 +1,4 @@
-import { projectsData } from "@/utils/data/projects-data";
+import { projectsData } from "@/app/data/projects-data";
 import SingleProject from "./single-project";
 import { ProTitle } from "../../ui/pageTitle";
 const Projects = () => {

@@ -29,7 +29,7 @@ import {
   throttle,
   media,
   removeLights,
-} from "@/utils/three";
+} from "@/app/utils/three";
 import fragmentShader from "raw-loader!glslify-loader!./displacement-sphere-fragment.glsl";
 import vertexShader from "raw-loader!glslify-loader!./displacement-sphere-vertex.glsl?raw";
 import styles from "./displacement-sphere.module.css";
@@ -42,14 +42,13 @@ const springConfig = {
 
 export const DisplacementSphere = (props) => {
   const [isVis, setIsVis] = useState(false);
-    // const { scrollY } = useScroll();
-    // const navOpc = useTransform(
-    //   scrollY,
-    //   [0, 90, 120, 170, 210, 270],
-    //   ["1", "0.9", "0.8", "0.7", "0.5", "0.18"]
-    // );
+  // const { scrollY } = useScroll();
+  // const navOpc = useTransform(
+  //   scrollY,
+  //   [0, 90, 120, 170, 210, 270],
+  //   ["1", "0.9", "0.8", "0.7", "0.5", "0.18"]
+  // );
 
- 
   const lights = useRef();
   const start = useRef(Date.now());
   const canvasRef = useRef();

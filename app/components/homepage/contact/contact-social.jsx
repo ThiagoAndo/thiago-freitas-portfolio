@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { personalData } from "@/utils/data/personal-data";
+import { personalData } from "@/app/data/personal-data";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { FaFacebook, FaStackOverflow } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";

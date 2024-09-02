@@ -1,7 +1,7 @@
 import { MdAlternateEmail } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
 import { IoMdCall } from "react-icons/io";
-import { personalData } from "@/utils/data/personal-data";
+import { personalData } from "@/app/data/personal-data";
 
 const childrens = [
   { comp: MdAlternateEmail, data: "email" },

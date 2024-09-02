@@ -1,10 +1,10 @@
-"use client"
-import { VisuallyHidden } from '../visually-hidden';
-import { useReducedMotion, useSpring } from 'framer-motion';
-import { memo, useEffect, useRef } from 'react';
-import { delay } from '@/utils/delay';
-import { classes } from '@/utils/style';
-import styles from './decoder-text.module.css';
+"use client";
+import { VisuallyHidden } from "../visually-hidden";
+import { useReducedMotion, useSpring } from "framer-motion";
+import { memo, useEffect, useRef } from "react";
+import { delay } from "@/app/utils/delay";
+import { classes } from "@/app/utils/style";
+import styles from "./decoder-text.module.css";
 
 // prettier-ignore
 const glyphs = [
@@ -26,8 +26,8 @@ const glyphs = [
 ];
 
 const CharType = {
-  Glyph: 'glyph',
-  Value: 'value',
+  Glyph: "glyph",
+  Value: "value",
 };
 
 function shuffle(content, output, position) {
@@ -45,58 +45,62 @@ function shuffle(content, output, position) {
   });
 }
 
-export const DecoderText = memo( function DecoderText
-  ({ text, start = true, delay: startDelay = 0, className, ...rest }) {
-    const output = useRef([{ type: CharType.Glyph, value: '' }]);
-    const container = useRef();
-    const reduceMotion = useReducedMotion();
-    const decoderSpring = useSpring(0, { stiffness: 8, damping: 5 });
+export const DecoderText = memo(function DecoderText({
+  text,
+  start = true,
+  delay: startDelay = 0,
+  className,
+  ...rest
+}) {
+  const output = useRef([{ type: CharType.Glyph, value: "" }]);
+  const container = useRef();
+  const reduceMotion = useReducedMotion();
+  const decoderSpring = useSpring(0, { stiffness: 8, damping: 5 });
 
-    useEffect(() => {
-      const containerInstance = container.current;
-      const content = text.split('');
-      let animation;
+  useEffect(() => {
+    const containerInstance = container.current;
+    const content = text.split("");
+    let animation;
 
-      const renderOutput = () => {
-        const characterMap = output.current.map(item => {
-          return `<span class="${styles[item.type]}">${item.value}</span>`;
-        });
-
-        containerInstance.innerHTML = characterMap.join('');
-      };
-
-      const unsubscribeSpring = decoderSpring.on('change', value => {
-        output.current = shuffle(content, output.current, value);
-        renderOutput();
+    const renderOutput = () => {
+      const characterMap = output.current.map((item) => {
+        return `<span class="${styles[item.type]}">${item.value}</span>`;
       });
 
-      const startSpring = async () => {
-        await delay(startDelay);
-        decoderSpring.set(content.length);
-      };
+      containerInstance.innerHTML = characterMap.join("");
+    };
 
-      if (start && !animation && !reduceMotion) {
-        startSpring();
-      }
+    const unsubscribeSpring = decoderSpring.on("change", (value) => {
+      output.current = shuffle(content, output.current, value);
+      renderOutput();
+    });
 
-      if (reduceMotion) {
-        output.current = content.map((value, index) => ({
-          type: CharType.Value,
-          value: content[index],
-        }));
-        renderOutput();
-      }
+    const startSpring = async () => {
+      await delay(startDelay);
+      decoderSpring.set(content.length);
+    };
 
-      return () => {
-        unsubscribeSpring?.();
-      };
-    }, [decoderSpring, reduceMotion, start, startDelay, text]);
+    if (start && !animation && !reduceMotion) {
+      startSpring();
+    }
 
-    return (
-      <span className={classes(styles.text, className)} {...rest}>
-        <VisuallyHidden className={styles.label}>{text}</VisuallyHidden>
-        <span aria-hidden className={styles.content} ref={container} />
-      </span>
-    );
-  }
-);
+    if (reduceMotion) {
+      output.current = content.map((value, index) => ({
+        type: CharType.Value,
+        value: content[index],
+      }));
+      renderOutput();
+    }
+
+    return () => {
+      unsubscribeSpring?.();
+    };
+  }, [decoderSpring, reduceMotion, start, startDelay, text]);
+
+  return (
+    <span className={classes(styles.text, className)} {...rest}>
+      <VisuallyHidden className={styles.label}>{text}</VisuallyHidden>
+      <span aria-hidden className={styles.content} ref={container} />
+    </span>
+  );
+});

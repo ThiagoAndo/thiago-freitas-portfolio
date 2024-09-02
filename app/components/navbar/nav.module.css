@@ -1,9 +1,22 @@
-.navi{
-     position: fixed;
-     background-color: transparent;
-     height: 100vh;
-     z-index: 1000;
-     width: 90px;
-     top: 50px;
+.navi {
+  position: fixed;
+  background-color: transparent;
+  height: 100vh;
+  z-index: 1000;
+  width: 90px;
+  left: 50px;
 }
 
+@media only screen and (max-width: 600px) {
+  .navi {
+    top: 120px;
+    width: 90%;
+    height: 100px;
+    left: 5%;
+    margin: auto;
+  }
+
+  .navi ul {
+    flex-direction: row;
+  }
+}

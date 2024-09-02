@@ -1,17 +1,17 @@
 "use client";
 // @flow strict
-import { isValidEmail } from '@/utils/check-email';
-import axios from 'axios';
-import { useState } from 'react';
+import { isValidEmail } from "@/app/utils/check-email";
+import axios from "axios";
+import { useState } from "react";
 import { TbMailForward } from "react-icons/tb";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 function ContactWithoutCaptcha() {
   const [error, setError] = useState({ email: false, required: false });
   const [userInput, setUserInput] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   const checkRequired = () => {
@@ -29,7 +29,7 @@ function ContactWithoutCaptcha() {
       return;
     } else {
       setError({ ...error, required: false });
-    };
+    }
 
     const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
@@ -37,19 +37,22 @@ function ContactWithoutCaptcha() {
 
     try {
       const res = await emailjs.send(serviceID, templateID, userInput, options);
-      const teleRes = await axios.post(`${process.env.NEXT_PUBLIC_APP_URL}/api/contact`, userInput);
+      const teleRes = await axios.post(
+        `${process.env.NEXT_PUBLIC_APP_URL}/api/contact`,
+        userInput
+      );
 
       if (res.status === 200 || teleRes.status === 200) {
-        toast.success('Message sent successfully!');
+        toast.success("Message sent successfully!");
         setUserInput({
-          name: '',
-          email: '',
-          message: '',
+          name: "",
+          email: "",
+          message: "",
         });
-      };
+      }
     } catch (error) {
       toast.error(error?.text || error);
-    };
+    }
   };
 
   return (
@@ -124,7 +127,10 @@ function ContactWithoutCaptcha() {
               </p>
             )}
             <button
-            style={{ background: 'linear-gradient(135deg, #2927b9, #2927b9, #2927b9, #662cca)'}}
+              style={{
+                background:
+                  "linear-gradient(135deg, #2927b9, #2927b9, #2927b9, #662cca)",
+              }}
               className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r animate-pulse px-5 md:px-12 py-2.5 md:py-3 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold"
               role="button"
               onClick={handleSendMail}
@@ -137,6 +143,6 @@ function ContactWithoutCaptcha() {
       </div>
     </div>
   );
-};
+}
 
 export default ContactWithoutCaptcha;
