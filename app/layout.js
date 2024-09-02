@@ -10,7 +10,7 @@ import { DisplacementSphere } from "./components/sphere-vertex/displacement-sphe
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./mui-theme/theme";
-import { LogoLink } from "./components/logo/LogoLink";
+import { LogoLink } from "./components/logo/logo-link";
 export const metadata = {
   title: "Portfolio of Thiago Freitas- Software Developer",
   description:
@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
         <DisplacementSphere />
         <ToastContainer />
         <main className="overflow-hidden  md:w-full  min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-full xl:max-w-full  2xl:max-w-full text-white">
-          {/* <LogoLink /> */}
+          <LogoLink />
           <AppRouterCacheProvider options={{ enableCssLayer: true }}>
             <ThemeProvider theme={theme}>
               <ReduxProvider> {children}</ReduxProvider>

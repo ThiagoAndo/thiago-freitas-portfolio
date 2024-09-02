@@ -36,7 +36,7 @@ export default function NavLink() {
                 <motion.div
                   whileHover={{ color: " #00adf4" }}
                   transition={{ type: "spring", duration: 1 }}
-                  className={`flex-wrap flex-col content-center items-center h-[40px] w-[40px] text-[#008aff] md:h-[50px] md:w-[50px] ${style.box}`}
+                  className={`flex-wrap flex-col content-center items-center h-[42px] w-[42px] text-[#008aff] md:h-[50px] md:w-[50px] ${style.box}`}
                 >
                   <Link
                     className="flex flex-col content-center items-center no-underline outline-none hover:no-underline"

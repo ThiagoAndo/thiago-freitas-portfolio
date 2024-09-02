@@ -7,6 +7,7 @@ export default function ThisTooltip({
   cl = "#ffff",
   bg = "#008aff",
   plt = "right",
+  bdCol="#662cca",
   tle,
 }) {
   const tooltipProps = {
@@ -15,7 +16,8 @@ export default function ThisTooltip({
         fontSize: ft,
         color: cl,
         backgroundColor: bg,
-        border: "solid 1px #662cca",
+        border: `solid 1px ${bdCol}`,
+        fontFamily: "Rock",
       },
     },
     arrow: {

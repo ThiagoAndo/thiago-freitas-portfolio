@@ -15,9 +15,9 @@ function HeroSection() {
         height={795}
         className="hero-color absolute top-0 z-[-2000]"
       />
-      <Navbar/>
+      <Navbar />
       <div className="relative order-2 lg:order-1 flex flex-col items-start justify-center pb-20 md:pb-10 lg:pt-10">
-        <p className="text-3xl my-2 md:text-5xl text-neutral-700 !leading-snug text-center mx-auto font-[900] text-white mt-4 center">
+        <p className="text-3xl  md:my-6 md:text-5xl text-neutral-700 !leading-snug text-center mx-auto font-[900] text-white mt-4 center">
           <span className={`text-[#00adf4] t-anime`}>
             <DecoderText text={"THIAGO FREITAS,"} delay={500} />
           </span>
