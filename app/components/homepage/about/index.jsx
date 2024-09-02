@@ -7,7 +7,8 @@ import Title from "../../ui/pageTitle";
 import { personalData } from "@/app/data/personal-data";
 import TextAnime from "../../ui/anime-text";
 import useDalay from "@/app/hooks/useDelay";
-import { scaleAnime } from "@/app/helper/framer-motion-Variants";
+import { scaleAnime } from "@/app/utils/framer-motion-Variants";
+
 import useMediaScreen from "@/app/hooks/useMediaScreen";
 import Bg from "../../ui/section-bg";
 import PageSection from "../../ui/section";

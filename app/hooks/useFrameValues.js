@@ -1,5 +1,5 @@
 import useMediaScreen from "@/app/hooks/useMediaScreen";
-import { motion, useScroll, useTransform } from "framer-motion";
+import {  useScroll, useTransform } from "framer-motion";
 
 export default function useFrame() {
   let navOpcVal = null;
@@ -22,6 +22,11 @@ export default function useFrame() {
 
   const { scrollY } = useScroll();
   const navOpc = useTransform(scrollY, navOpcVal.arr1, navOpcVal.arr2);
+  const navZ = useTransform(
+    scrollY,
+    [0,  200],
+    [1000, -1000]
+  );
 
-  return navOpc;
+  return { navOpc, navZ };
 }

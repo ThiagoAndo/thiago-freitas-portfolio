@@ -3,12 +3,12 @@
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { RiContactsFill } from "react-icons/ri";
-import { linkChildrens } from "../../../helper/childrens";
+import { linkChildrens } from "../../../utils/childrens";
 import { MdDownload } from "react-icons/md";
 import UiLinks from "./UiLinks";
 import Btns from "./btn-hero";
 
-import { staggerChildren } from "@/app/helper/framer-motion-Variants";
+import { staggerChildren } from "@/app/utils/framer-motion-Variants";
 
 export default function SocialLinks() {
   const [isVis, setIsVis] = useState(false);

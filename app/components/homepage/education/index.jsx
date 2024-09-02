@@ -2,8 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BsPersonWorkspace } from "react-icons/bs";
-import AnimationLottie from "../../../helper/animation-lottie";
-import GlowCard from "../../../helper/glow-card";
+import AnimationLottie from "../../../utils/animation-lottie";
+import GlowCard from "../../../utils/glow-card";
 import js from "/public/lottie/js.json";
 import Title from "../../ui/pageTitle";
 import PageSection from "../../ui/section";

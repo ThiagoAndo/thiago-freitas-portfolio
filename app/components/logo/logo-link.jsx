@@ -6,7 +6,7 @@ import useFrame from "@/app/hooks/useFrameValues";
 import style from "./logo-link.module.css";
 
 export const LogoLink = () => {
-const navOpc = useFrame();
+const {navOpc} = useFrame();
 
   return (
     <motion.div

@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Footer from "./components/footer/footer";
 import "./css/card.scss";
 import "./css/globals.scss";
-import ScrollToTop from "./helper/scroll-to-top";
+import ScrollToTop from "./utils/scroll-to-top";
 import ReduxProvider from "@/app/store/provider";
 import { DisplacementSphere } from "./components/sphere-vertex/displacement-sphere";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";

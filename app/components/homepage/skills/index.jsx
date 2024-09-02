@@ -1,13 +1,10 @@
 // @flow strict
 
-import { skillsData } from "@/app/data/skills";
-import { skillsImage } from "@/app/utils/skill-image";
-import Image from "next/image";
-import Marquee from "react-fast-marquee";
 import Title from "../../ui/pageTitle";
 import TextAnime from "../../ui/anime-text";
 import { useInView } from "react-intersection-observer";
 import PageSection from "../../ui/section";
+import Tech from "./Tech";
 
 function Skills() {
   const { ref: des, inView: desV } = useInView({
@@ -16,52 +13,14 @@ function Skills() {
   return (
     <PageSection
       id={"skills"}
-      tailwind={"relative z-50 md:border-t md:border-[#25213b] my-20 lg:my-48"}
+      tailwind={"relative z-50 md:border-t md:border-[#25213b] mt-20 mb-24 lg:mt-40"}
       ref={des}
     >
       <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20"></div>
       <Title side={false}>
         <TextAnime txt={"SKILLS"} showTxt={desV} />
       </Title>
-
-      <div className="w-full my-12">
-        <Marquee
-          gradient={false}
-          speed={80}
-          pauseOnHover={true}
-          pauseOnClick={true}
-          delay={0}
-          play={true}
-          direction="left"
-        >
-          {skillsData.map((skill, id) => (
-            <div
-              className="w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 m-3 sm:m-5 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
-              key={id}
-            >
-              <div className="h-full w-full rounded-lg border border-[#1f223c] bg-[#11152c] shadow-none shadow-gray-50 group-hover:border-violet-500 transition-all duration-500">
-                <div className="flex -translate-y-[1px] justify-center">
-                  <div className="w-3/4">
-                    <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-violet-500 to-transparent" />
-                  </div>
-                </div>
-                <div className="flex flex-col items-center justify-center gap-3 p-6">
-                  <div className="h-8 sm:h-10">
-                    <Image
-                      src={skillsImage(skill)?.src}
-                      alt={skill}
-                      width={40}
-                      height={40}
-                      className="h-full w-auto rounded-lg"
-                    />
-                  </div>
-                  <p className="text-white text-sm sm:text-lg">{skill}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </Marquee>
-      </div>
+      <Tech />
     </PageSection>
   );
 }

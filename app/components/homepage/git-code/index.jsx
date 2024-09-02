@@ -1,9 +1,9 @@
 // @flow strict
 import GitHubCalendar from "react-github-calendar";
-import BdAnime from "../../../helper/border-animation";
+import BdAnime from "../../../utils/border-animation";
 import Title from "../../ui/pageTitle";
 import PageSection from "../../ui/section";
-import AnimationLottie from "../../../helper/animation-lottie";
+import AnimationLottie from "../../../utils/animation-lottie";
 import experience from "/public/lottie/code.json";
 import coding from "/public/lottie/coding.json";
 import contact from "/public/lottie/contact.json";

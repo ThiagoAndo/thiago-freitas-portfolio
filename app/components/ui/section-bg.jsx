@@ -1,5 +1,7 @@
 import style from "./section-bg.module.css";
+import { motion,  } from "framer-motion";
+
 
 export default function Bg() {
-  return <div className={style.bg}></div>;
+  return <motion.div className={style.bg}></motion.div>;
 }

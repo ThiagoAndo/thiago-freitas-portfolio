@@ -17,7 +17,7 @@ export default function ThisTooltip({
         color: cl,
         backgroundColor: bg,
         border: `solid 1px ${bdCol}`,
-        fontFamily: "Rock",
+        fontFamily: "Roboto",
       },
     },
     arrow: {
