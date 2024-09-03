@@ -8,6 +8,7 @@ export default function TextAnime({ txt, showTxt }) {
         {showTxt === true ? (
           msg.map((letter, i) => (
             <motion.p
+             className="m-0"
               style={letter === "." ? { color: `transparent` } : {}}
               initial={{ opacity: 0, rotateY: 0 }}
               animate={{

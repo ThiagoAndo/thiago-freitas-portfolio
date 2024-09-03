@@ -1,8 +1,15 @@
 export const scaleAnime = {
   init: { scale: 0, opacity: 0 },
   anime: { scale: [0.8, 0.9, 1], opacity: 1 },
-  end: { x: 300, opacity: 0 },
-  time: { duration: 1.2, type: "spring", bounce: 0.2 },
+  end: { scale: [1, 1.2, 1.3], opacity: 0 },
+  transition: { duration: 1.2, type: "spring", bounce: 0.2 },
+};
+
+export const bgAnime = {
+  init: { scale: 0, opacity: 0 },
+  anime: { scale: [1.2, 1.1, 1], opacity: 1 },
+  end: { scale: [1, 0.9, 0.8], opacity: 0 },
+  transition: { duration: 1.2, type: "spring", bounce: 0.2 },
 };
 
 export const staggerChildren = {
@@ -34,6 +41,22 @@ export const staggerChildren = {
         duration: 1,
         type: "spring",
       },
+    },
+  },
+};
+
+const notUsed = {
+  hidden: {
+    y: -50,
+    opacity: 0,
+  },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      duration: 1.25,
+      delay: 1.25,
     },
   },
 };

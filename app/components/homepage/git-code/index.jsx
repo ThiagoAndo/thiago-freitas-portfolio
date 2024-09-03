@@ -12,12 +12,37 @@ import education from "/public/lottie/education.json";
 import js from "/public/lottie/js.json";
 import lotti from "/public/lottie/lotti.json";
 import study from "/public/lottie/study.json";
+import { useInView } from "react-intersection-observer";
+import useMediaScreen from "@/app/hooks/useMediaScreen";
+import TextAnime from "../../ui/anime-text";
+import Bg from "../../ui/section-bg";
 
 function GitCode() {
-  return (
-    <PageSection id="experience">
-      <Title>DAYS I CODE</Title>
+  let { match: size } = useMediaScreen(
+    "only screen and (min-width : 369px) and (max-width : 500px)"
+  );
+  let threshold = 0.2;
+  if (size) threshold = 0.1;
+  const { ref: des, inView: desV } = useInView({
+    threshold,
+  });
 
+  return (
+    <PageSection ref={des} id="experience">
+      <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20 "></div>
+
+      {desV === true ? (
+        <>
+          <Title>
+            <TextAnime txt={"DAYS I CODE"} showTxt={desV} />
+          </Title>
+          <Bg show={500} animate={true} />
+        </>
+      ) : (
+        <Title>
+          <p style={{ color: "transparent" }}>DAYS I CODE.</p>
+        </Title>
+      )}
       <div className="py-8">
         <div className="grid mt-12 md:mt-0 grid-cols-1 lg:grid-cols-3">
           <div className="flex flex-col justify-center mt-16 col-span-2">

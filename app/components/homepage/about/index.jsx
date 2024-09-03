@@ -13,23 +13,24 @@ import useMediaScreen from "@/app/hooks/useMediaScreen";
 import Bg from "../../ui/section-bg";
 import PageSection from "../../ui/section";
 function AboutSection() {
-  const { ref: des, inView: desV } = useInView({
-    threshold: 0.4,
-  });
-  const isTime = useDalay(desV && 1200);
-  let { match:size } = useMediaScreen(
+  let { match: size } = useMediaScreen(
     "only screen and (min-width : 369px) and (max-width : 500px)"
   );
+  let threshold = 0.4;
+  if (size) threshold = 0;
+  const { ref: des, inView: desV } = useInView({
+    threshold,
+  });
 
+  const isTime = useDalay(desV && 1200);
   return (
     <PageSection
       id="about"
       tailwind={"my-6 lg:my-6 relative pt-28"}
-      stl={{ height: size === true ? "170vh" : "90vh" }}
+      stl={{ height: size === true ? "120vh" : "90vh" }}
       ref={des}
     >
-      {desV && <Bg />}
-      <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20 "></div>
+      {desV && <Bg show={1} animate={true} />}
       <AnimatePresence>
         {desV && (
           <motion.div
