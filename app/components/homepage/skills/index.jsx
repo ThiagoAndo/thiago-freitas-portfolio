@@ -5,6 +5,7 @@ import TextAnime from "../../ui/anime-text";
 import { useInView } from "react-intersection-observer";
 import PageSection from "../../ui/section";
 import Tech from "./Tech";
+import Carrocel from "./carrocel";
 import useMediaScreen from "@/app/hooks/useMediaScreen";
 
 function Skills() {
@@ -30,7 +31,7 @@ function Skills() {
       <Title side={false}>
         <TextAnime txt={"SKILLS"} showTxt={desV} />
       </Title>
-      <Tech />
+      <Carrocel />
     </PageSection>
   );
 }
