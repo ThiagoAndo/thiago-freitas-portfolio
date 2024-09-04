@@ -9,11 +9,12 @@ export const skillsData = [
   "Tailwind",
   "MySQL",
   "Git",
-  "MaterialUI",
+  "Mongo DB",
   "Node JS",
-  "redux toolkit",
-  "react query",
-  "framer motion",
+  "Redux Toolkit",
+  "React Query",
+  "Framer Motion",
+  "Express JS"
 ];
 
 

@@ -13,10 +13,10 @@ export default function Structure() {
       {/* <HeroSection /> */}
       <AboutSection />
       <Skills />
-      {/* <Projects /> */}
+      <Projects />
       {/* <GitCode /> */}
       {/* <Education /> */}
-      <ContactSection />
+      {/* <ContactSection /> */}
     </>
   );
 }

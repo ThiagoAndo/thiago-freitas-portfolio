@@ -31,6 +31,7 @@ function Skills() {
       <Title side={false}>
         <TextAnime txt={"SKILLS"} showTxt={desV} />
       </Title>
+      <Tech/>
       <Carrocel />
     </PageSection>
   );
