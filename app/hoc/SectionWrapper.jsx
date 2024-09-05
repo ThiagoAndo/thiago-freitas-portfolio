@@ -1,7 +1,7 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import Bg from "../components/ui/section-bg";
-import { scaleAnime } from "../utils/framer-motion-Variants";
+import { scaleAnime } from "../utils/motion-variants";
 import { useInView } from "react-intersection-observer";
 import useMediaScreen from "@/app/hooks/useMediaScreen";
 import useDalay from "@/app/hooks/useDelay";
@@ -29,11 +29,11 @@ const SectionWrapper = (Component, id, tailwind) => {
       stl = { height: "90vh" };
     }
     return (
-        <section style={stl} ref={des} className={thisStyle} id={id}>
-          {desV && <Bg />}
+      <section style={stl} ref={des} className={thisStyle} id={id}>
+        {desV && <Bg />}
 
-          <Component isTime={isTime} desV={desV} />
-        </section>
+        <Component isTime={isTime} desV={desV} />
+      </section>
     );
   }
 

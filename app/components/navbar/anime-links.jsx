@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { staggerChildren } from "@/app/utils/framer-motion-Variants";
+import { staggerChildren } from "@/app/utils/motion-variants";
 import style from "./anime-links.module.css";
 import { navChildrens } from "@/app/utils/childrens";
 import ThisTooltip from "../ui/tooltip";

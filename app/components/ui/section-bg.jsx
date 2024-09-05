@@ -1,12 +1,12 @@
 import style from "./section-bg.module.css";
 import { motion, AnimatePresence } from "framer-motion";
-import { bgAnime } from "@/app/utils/framer-motion-Variants";
+import { bgAnime } from "@/app/utils/motion-variants";
 import useDalay from "@/app/hooks/useDelay";
 
 export default function Bg({ show, animate }) {
   const isTime = useDalay(show);
-console.log(isTime);
-console.log("isTime");
+  console.log(isTime);
+  console.log("isTime");
   if (animate) {
     return (
       <AnimatePresence>

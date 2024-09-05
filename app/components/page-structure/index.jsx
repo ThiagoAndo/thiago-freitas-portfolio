@@ -12,7 +12,7 @@ export default function Structure() {
     <>
       {/* <HeroSection /> */}
       <AboutSection />
-      <Skills />
+      {/* <Skills />/ */}
       <Projects />
       {/* <GitCode /> */}
       {/* <Education /> */}

@@ -7,7 +7,7 @@ import Title from "../../ui/pageTitle";
 import { personalData } from "@/app/data/personal-data";
 import TextAnime from "../../ui/anime-text";
 import useDalay from "@/app/hooks/useDelay";
-import { scaleAnime } from "@/app/utils/framer-motion-Variants";
+import { scaleAnime } from "@/app/utils/motion-variants";
 
 import useMediaScreen from "@/app/hooks/useMediaScreen";
 import Bg from "../../ui/section-bg";
@@ -42,7 +42,7 @@ function AboutSection() {
           >
             {isTime === true ? (
               <Title side={true}>
-                <TextAnime txt={"ABOUT ME"} showTxt={desV} />
+                <TextAnime txt={"ABOUT ME"} showTxt={isTime} />
               </Title>
             ) : (
               <p style={{ color: "transparent" }}>ABOUT ME </p>

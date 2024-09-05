@@ -8,7 +8,7 @@ import { MdDownload } from "react-icons/md";
 import UiLinks from "./UiLinks";
 import Btns from "./btn-hero";
 
-import { staggerChildren } from "@/app/utils/framer-motion-Variants";
+import { staggerChildren } from "@/app/utils/motion-variants";
 
 export default function SocialLinks() {
   const [isVis, setIsVis] = useState(false);
