@@ -11,10 +11,10 @@ export default function Structure() {
   return (
     <>
       {/* <HeroSection /> */}
-      <AboutSection />
-      {/* <Skills />/ */}
+      {/* <AboutSection /> */}
+      <Skills />
       <Projects />
-      {/* <GitCode /> */}
+      <GitCode />
       {/* <Education /> */}
       {/* <ContactSection /> */}
     </>

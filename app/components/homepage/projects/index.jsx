@@ -6,7 +6,6 @@ import { useInView } from "react-intersection-observer";
 import useDalay from "@/app/hooks/useDelay";
 import useMediaScreen from "@/app/hooks/useMediaScreen";
 import TextAnime from "../../ui/anime-text";
-import Title from "../../ui/pageTitle";
 
 const Projects = () => {
   let { match: size } = useMediaScreen(
@@ -20,14 +19,19 @@ const Projects = () => {
 
   const isTime = useDalay(desV && 1200);
   return (
-    <PageSection id="projects" ref={des}>
-      {desV === true ? (
-        <Title side={true}>
+    <PageSection
+      tailwind={"relative z-50  my-12 lg:my-24"}
+      id="projects"
+      stl={{ height: size === true ? "120vh" : "100vh" }}
+      ref={des}
+    >
+      <ProTitle side={true}>
+        {desV === true ? (
           <TextAnime txt={"PROJECTS"} showTxt={desV} />
-        </Title>
-      ) : (
-        <p style={{ color: "transparent" }}>PROJECTS</p>
-      )}
+        ) : (
+          <p style={{ color: "transparent" }}>PROJECTS...</p>
+        )}
+      </ProTitle>
 
       <div className="pt-24">
         <div className="my-12 flex flex-col gap-6">
