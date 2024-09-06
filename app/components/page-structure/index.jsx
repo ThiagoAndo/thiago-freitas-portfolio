@@ -10,8 +10,8 @@ import GitCode from "../homepage/git-code";
 export default function Structure() {
   return (
     <>
-      {/* <HeroSection /> */}
-      {/* <AboutSection /> */}
+      <HeroSection />
+      <AboutSection />
       <Skills />
       <Projects />
       <GitCode />

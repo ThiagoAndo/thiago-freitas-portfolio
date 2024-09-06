@@ -52,7 +52,7 @@ function AboutSection() {
               className="grid pb-12 grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16"
             >
               <motion.div className="order-1 lg:order-1">
-                <div className="mb-5  text-[#00adf4] font-bold  text-base 2xl:text-xl uppercase">
+                <div className="mb-5  text-[#00adf4] font-bold font-roboto text-base 2xl:text-xl uppercase">
                   <TextAnime txt={"WHO I AM ?"} showTxt={isTime} />
                 </div>
                 <p className=" mb-8 md:mb-0 text-gray-200 text-justify text-base 2xl:text-xl">

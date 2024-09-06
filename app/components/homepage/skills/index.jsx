@@ -12,7 +12,7 @@ function Skills() {
   let { match: size } = useMediaScreen(
     "only screen and (min-width : 369px) and (max-width : 500px)"
   );
-  let threshold = 0.2;
+  let threshold = 0.1;
 
   if (size) threshold = 0.03;
 

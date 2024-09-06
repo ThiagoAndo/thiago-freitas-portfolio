@@ -4,11 +4,11 @@ export default function TextAnime({ txt, showTxt }) {
   msg = msg.split("");
   return (
     <AnimatePresence>
-      <div className="flex flex-row text-lg md:text-2xl text-lg md:text-2xl">
+      <div className="flex flex-row text-lg md:text-2xl">
         {showTxt === true ? (
           msg.map((letter, i) => (
             <motion.p
-             className="m-0"
+              className="m-0"
               style={letter === "." ? { color: `transparent` } : {}}
               initial={{ opacity: 0, rotateY: 0 }}
               animate={{
@@ -24,7 +24,9 @@ export default function TextAnime({ txt, showTxt }) {
               {letter}
             </motion.p>
           ))
-        ) : (<p className="text-transparent">{txt}</p> )}
+        ) : (
+          <p className="text-transparent text-lg md:text-2xl">{txt}</p>
+        )}
       </div>
     </AnimatePresence>
   );

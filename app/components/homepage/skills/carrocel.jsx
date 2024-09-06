@@ -19,7 +19,7 @@ function Carrocel() {
       delay={0}
       play={true}
       direction="left"
-      className="h-36 mt-5" 
+      className="h-36 mt-5"
     >
       {skillsData.map((skill, id) => (
         <div
@@ -35,7 +35,7 @@ function Carrocel() {
             <div className=" relative flex flex-col items-center justify-center gap-3">
               <div className="z-50 w-[50px] h-[50px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20"></div>
 
-              <p className="text-white  text-xl font-bold py-2">{skill}</p>
+              <p className="text-[#00adf4] text-xl font-bold py-2">{skill}</p>
             </div>
           </div>
         </div>

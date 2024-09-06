@@ -11,7 +11,7 @@ const Projects = () => {
   let { match: size } = useMediaScreen(
     "only screen and (min-width : 369px) and (max-width : 500px)"
   );
-  let threshold = 0.2;
+  let threshold = 0.1;
   if (size) threshold = 0;
   const { ref: des, inView: desV } = useInView({
     threshold,
@@ -20,18 +20,14 @@ const Projects = () => {
   const isTime = useDalay(desV && 1200);
   return (
     <PageSection
-      tailwind={"relative z-50  my-12 lg:my-24"}
+      tailwind={"relative z-50  my-40"}
       id="projects"
-      stl={{ height: size === true ? "120vh" : "100vh" }}
+      stl={{ height: size === true ? "120vh" : "120vh" }}
       ref={des}
     >
       <ProTitle side={true}>
-        {desV === true ? (
           <TextAnime txt={"PROJECTS"} showTxt={desV} />
-        ) : (
-          <p style={{ color: "transparent" }}>PROJECTS...</p>
-        )}
-      </ProTitle>
+        </ProTitle>
 
       <div className="pt-24">
         <div className="my-12 flex flex-col gap-6">
