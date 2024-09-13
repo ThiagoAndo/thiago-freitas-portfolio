@@ -6,7 +6,9 @@
 
 *{
  font-family: "Roboto", sans-serif;
+ scroll-behavior: smooth;
 }
+
 
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -16,9 +18,11 @@
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.333),rgba(1, 65, 255, 0.07), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(
       to bottom right,
+         rgba(1, 65, 255, 0.3),
       rgba(1, 65, 255, 0),
       rgba(1, 65, 255, 0),
       rgba(1, 65, 255, 0.3)
+      
     );
 
 
@@ -80,7 +84,9 @@ body {
 svg {
     color : "red";
 }
-
+.font{
+   font-family: "Rock Salt", cursive;
+}
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;

@@ -3,23 +3,23 @@ import { motion, AnimatePresence } from "framer-motion";
 import { bgAnime } from "@/app/utils/motion-variants";
 import useDalay from "@/app/hooks/useDelay";
 
-export default function Bg({ show, animate }) {
-  const isTime = useDalay(show);
+export default function Bg({ time, animate, git = false }) {
+  const isTime = useDalay(time);
   console.log(isTime);
   console.log("isTime");
   if (animate) {
     return (
-      <AnimatePresence>
+      <>
         {isTime && (
           <motion.div
             initial={bgAnime.init}
             animate={bgAnime.anime}
             exit={bgAnime.end}
             transition={bgAnime.transition}
-            className={style.bg}
+            className={git === false ? style.bg : style.bg_git}
           ></motion.div>
         )}
-      </AnimatePresence>
+      </>
     );
   } else {
     <motion.div className={style.bg}></motion.div>;

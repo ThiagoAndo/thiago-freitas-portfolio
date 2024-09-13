@@ -1,18 +1,12 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { projects } from "@/app/data/projects-data";
 import Image from "next/image";
-import github  from "/public/png/github.png";
-import  pineapple  from "/public/png/pineapple.png";
-import  pineappleHover  from "/public/png/pineappleHover.png";
-
+import github from "/public/png/github.png";
+import pineapple from "/public/png/pineapple.png";
+import pineappleHover from "/public/png/pineappleHover.png";
 import {
   fadeIn,
-  textVariant,
-  staggerContainer,
 } from "@/app/utils/motion-variants";
-
-const ProjectCard = ({
+export default function ProjectCard({
   id,
   name,
   description,
@@ -22,7 +16,7 @@ const ProjectCard = ({
   index,
   active,
   handleClick,
-}) => {
+}) {
   return (
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
@@ -104,7 +98,7 @@ const ProjectCard = ({
                 document
                   .querySelector(".btn-icon")
                   .setAttribute("src", pineappleHover);
-                document.alert("yes")
+                document.alert("yes");
               }}
               onMouseOut={() => {
                 document
@@ -125,51 +119,4 @@ const ProjectCard = ({
       )}
     </motion.div>
   );
-};
-
-const ProjectBody = () => {
-  const [active, setActive] = useState("project-2");
-
-  return (
-    <div className="-mt-[6rem]">
-      <div className="w-full flex">
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className="mt-4 text-justify  text-taupe text-[18px] max-w-3xl leading-[30px]"
-        >
-          These projects provide a comprehensive showcase of my professional
-          abilities through hands-on examples of my work. Each project is
-          accompanied by a brief overview, along with links to the corresponding
-          code repositories and live demonstrations. These examples not only
-          highlight my proficiency in solving complex technical challenges but
-          also demonstrate my adaptability across a range of technologies.
-          Additionally, they reflect my experience in efficiently managing and
-          leading projects from concept to completion, ensuring high-quality
-          outcomes.
-        </motion.p>
-      </div>
-
-      <motion.div
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
-        className="2xl:max-w-[1280px] w-full mx-auto flex flex-col"
-      >
-        <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={project.id}
-              index={index}
-              {...project}
-              active={active}
-              handleClick={setActive}
-            />
-          ))}
-        </div>
-      </motion.div>
-    </div>
-  );
-};
-
-export default ProjectBody;
+}

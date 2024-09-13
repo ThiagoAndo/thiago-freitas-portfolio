@@ -15,8 +15,8 @@ export default function Structure() {
       <Skills />
       <Projects />
       <GitCode />
-      {/* <Education /> */}
-      {/* <ContactSection /> */}
+      <Education />
+      <ContactSection />
     </>
   );
 }
