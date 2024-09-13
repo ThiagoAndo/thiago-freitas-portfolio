@@ -30,7 +30,7 @@ function AboutSection() {
       stl={{ height: size === true ? "120vh" : "90vh" }}
       ref={des}
     >
-      {desV && <Bg show={1} animate={true} />}
+      {desV && <Bg show={50} animate={true} />}
       <AnimatePresence>
         {desV && (
           <motion.div

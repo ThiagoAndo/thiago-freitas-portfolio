@@ -2,7 +2,7 @@
   height: 80%;
   margin-top: 1.5%;
   width: 100%;
-  background: var( --primary-glow);
+  background: var( --secondary-glow);
   position: absolute;
   border-radius: 15px;
   z-index: -1000;

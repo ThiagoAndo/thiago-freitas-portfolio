@@ -21,7 +21,7 @@ function GitCode() {
   let { match: size } = useMediaScreen(
     "only screen and (min-width : 369px) and (max-width : 500px)"
   );
-  let threshold = 0.2;
+  let threshold = 0.8;
   if (size) threshold = 0.1;
   const { ref: des, inView: desV } = useInView({
     threshold,
@@ -29,20 +29,16 @@ function GitCode() {
 
   return (
     <PageSection ref={des} id="experience">
-      <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20 "></div>
+      <div className="w-[100px] h-[100px] bg-violet-100 ounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20 "></div>
 
-      {desV === true ? (
+    
         <>
           <Title>
             <TextAnime txt={"DAYS I CODE"} showTxt={desV} />
           </Title>
-          <Bg show={500} animate={true} />
+           {desV === true ?  <Bg show={1} animate={true} />:null}
         </>
-      ) : (
-        <Title>
-          <p style={{ color: "transparent" }}>DAYS I CODE.</p>
-        </Title>
-      )}
+   
       <div className="py-8">
         <div className="grid mt-12 md:mt-0 grid-cols-1 lg:grid-cols-3">
           <div className="flex flex-col justify-center mt-16 col-span-2">
