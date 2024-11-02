@@ -1,15 +1,15 @@
 export const scaleAnime = {
   init: { scale: 0, opacity: 0 },
   anime: { scale: [0.8, 0.9, 1], opacity: 1 },
-  end: { scale: [1, 1.2, 1.3], opacity: 0 },
+  end: { scale: [1, 1.2, 1.3], opacity: 0 ,duration: 1 },
   transition: { duration: 1 },
 };
 
 export const bgAnime = {
   init: { scale: 0, opacity: 0 },
   anime: { scale: [1.2, 1.1, 1], opacity: 1 },
-  end: { scale: [1, 0.9, 0.8], opacity: 0},
-  transition: { duration: 1},
+  end: { scale: [1, 0.9, 0.8], opacity: 0, duration: 1 },
+  transition: { duration: 1 },
 };
 
 export const staggerChildren = {

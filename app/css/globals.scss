@@ -6,7 +6,9 @@
 
 *{
  font-family: "Roboto", sans-serif;
+ scroll-behavior: smooth;
 }
+
 
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -82,7 +84,9 @@ body {
 svg {
     color : "red";
 }
-
+.font{
+   font-family: "Rock Salt", cursive;
+}
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;

@@ -1,29 +1,16 @@
-import ayla from '/public/image/ayla.jpg';
+import commerce from '/public/png/eComerce.png';
 import crefin from '/public/image/crefin.jpg';
 import realEstate from '/public/image/real-estate.jpg';
 import travel from '/public/image/travel.jpg';
 export const projects = [
   {
     id: "project-1",
-    name: "KomiKult",
-    description: "A comic characters list app that displays Marvel characters.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: crefin,
-    repo: "https://github.com/shaqdeff/KomiKult",
-    demo: "https://shaqdeff.github.io/KomiKult/",
+    name: "Next Store",
+    description:
+      "The Next Store Online Shopping is a modern, full-stack e-commerce web application built to showcase a professional approach to online shopping platforms. it is developed it using React JS, Next JS, Node JS, and Express JS.",
+    image: commerce,
+    repo: "https://github.com/ThiagoAndo/Store-e-commerce",
+    demo: "https://store-comerce.vercel.app",
   },
   {
     id: "project-2",
@@ -88,7 +75,7 @@ export const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: ayla,
+    image: commerce,
     repo: "https://github.com/shaqdeff/Movie-Metro",
     demo: "https://movie-metro.netlify.app/",
   },
@@ -111,7 +98,7 @@ export const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: ayla,
+    image: commerce,
     repo: "https://github.com/shaqdeff/Nyeusi-Fest-Site",
     demo: "https://shaqdeff.github.io/Nyeusi-Fest-Site/",
   },

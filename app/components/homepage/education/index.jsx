@@ -7,6 +7,9 @@ import GlowCard from "../../../utils/glow-card";
 import js from "/public/lottie/js.json";
 import Title from "../../ui/pageTitle";
 import PageSection from "../../ui/section";
+import TextAnime from "../../ui/anime-text";
+import { useInView } from "react-intersection-observer";
+
 function Education() {
   return (
     <PageSection
@@ -42,7 +45,7 @@ function Education() {
                 </div>
                 <div>
                   <p className="text-base  xl:text-1xl  mb-2 font-medium uppercase">
-                    Software Development
+                    System Analysis and Development
                   </p>
                   <Link href={"#"}>
                     <p className="text-base  xl:text-1xl">

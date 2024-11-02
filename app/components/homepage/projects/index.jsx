@@ -22,7 +22,7 @@ const Projects = () => {
     <PageSection
       tailwind={"relative z-50 pt-12 mt-20 mb-40"}
       id="projects"
-      stl={{ height: size === true ? "120vh" : "120vh" }}
+      stl={{ height: size === true ? "130vh" : "150vh" }}
       ref={des}
     >
       <ProTitle side={true}>

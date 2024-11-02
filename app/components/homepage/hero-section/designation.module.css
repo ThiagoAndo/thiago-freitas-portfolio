@@ -1,12 +1,22 @@
 .t-anime {
   padding: 0.5rem;
   border-radius: 0.5rem;
-  background: linear-gradient(135deg, #2927b9, #2927b9, #662cca) 0 100% /
-    var(--d, 0) no-repeat;
+  background: linear-gradient(135deg, #2927b9, #2927b9, #662cca) 0 100% / var(--d, 0) no-repeat;
   transition: 0.7s;
+  font-size: 5rem;
+  margin: 0;
+  color: #90defd;
+  transition: all;
 }
 
 .ta-anime {
-  border: solid 1px #662cca;
+  transition-duration: 2s;
   --d: 100%;
+}
+
+.ta-des {
+  transition-duration: 1.5s;
+  background: transparent;
+  -webkit-text-stroke: 2px #008aff;
+  color: transparent;
 }

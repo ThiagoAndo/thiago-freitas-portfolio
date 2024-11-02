@@ -7,7 +7,7 @@ import Container from "../../ui/Container";
 import Navbar from "../../navbar";
 function HeroSection() {
   return (
-    <Container tailwind="relative flex flex-col items-center justify-between pt-56 pb-36 md:py-16 2xl:py-40 h-full">
+    <Container tailwind="relative flex flex-col items-center justify-between pt-56 pb-36 md:py-16 2xl:py-40 md:h-full">
       <Image
         src="/hero.svg"
         alt="Hero"

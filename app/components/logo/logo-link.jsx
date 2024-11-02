@@ -22,7 +22,8 @@ const {navOpc} = useFrame();
         cl={"#000000"}
       >
         <Link className={style.logo} href={"#"}>
-          <spam className="font-rock font-bold text-2xl">T</spam>
+          <spam className="font
+           font-bold text-2xl">T</spam>
         </Link>
       </ThisTooltip>
     </motion.div>
