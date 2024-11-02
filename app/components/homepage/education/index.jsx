@@ -42,7 +42,7 @@ function Education() {
                 </div>
                 <div>
                   <p className="text-base  xl:text-1xl  mb-2 font-medium uppercase">
-                    System Analisys and Development
+                    System Analysis and Development
                   </p>
                   <Link href={"#"}>
                     <p className="text-base  xl:text-1xl">

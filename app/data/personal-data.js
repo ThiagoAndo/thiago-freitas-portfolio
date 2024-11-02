@@ -1,4 +1,4 @@
-import pladeholder from "/public/png/placeholder.jpg"
+import pladeholder from "/public/png/placeholder.png"
 export const personalData = {
   name: "Thiago Freitas",
   profile: pladeholder,

@@ -12,8 +12,12 @@ export default function Designation() {
       setIsVis(true);
     }, 2300);
     setTimeout(() => {
-      setAnime(true);
+      setAnime("ta-anime");
     }, 2100);
+
+    setTimeout(() => {
+      setAnime("ta-des");
+    },3000);
   }, []);
 
   return (
@@ -21,7 +25,7 @@ export default function Designation() {
       initial={{ opacity: 0 }}
       animate={{ opacity: isVis && 1 }}
       className={`text-[#00adf4] ${style["t-anime"]} ${
-        anime ? style["ta-anime"] + " text-[#90defd]" : ""
+        anime ? style[anime] + " text-[#90defd]" : ""
       }`}
     >
       {personalData.designation + "."}

@@ -8,7 +8,6 @@ import { personalData } from "@/app/data/personal-data";
 import TextAnime from "../../ui/anime-text";
 import useDalay from "@/app/hooks/useDelay";
 import { scaleAnime } from "@/app/utils/motion-variants";
-
 import useMediaScreen from "@/app/hooks/useMediaScreen";
 import Bg from "../../ui/section-bg";
 import PageSection from "../../ui/section";
