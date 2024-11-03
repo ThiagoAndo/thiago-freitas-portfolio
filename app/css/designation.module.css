@@ -20,3 +20,14 @@
   -webkit-text-stroke: 2px #008aff;
   color: transparent;
 }
+
+
+@media (max-width: 640px) { 
+.t-anime {
+  font-size: 3rem;
+}
+.ta-anime {
+font-size: 3rem;
+}
+
+ }

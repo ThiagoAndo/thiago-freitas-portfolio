@@ -42,12 +42,13 @@ const springConfig = {
 
 export const DisplacementSphere = (props) => {
   const [isVis, setIsVis] = useState(false);
-  // const { scrollY } = useScroll();
-  // const navOpc = useTransform(
-  //   scrollY,
-  //   [0, 90, 120, 170, 210, 270],
-  //   ["1", "0.9", "0.8", "0.7", "0.5", "0.18"]
-  // );
+  const { scrollY } = useScroll();
+  const navOpc = useTransform(
+    scrollY,
+    [0, 700, 1200,2000],
+
+    ["1", "0","0","1"]
+  );
 
   const lights = useRef();
   const start = useRef(Date.now());
@@ -218,9 +219,9 @@ export const DisplacementSphere = (props) => {
         <Transition in timeout={3000} nodeRef={canvasRef}>
           {({ visible, nodeRef }) => (
             <motion.canvas
-              // style={{
-              //   opacity: navOpc,
-              // }}
+              style={{
+                opacity: navOpc,
+              }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.5, type: "spring", bounce: 0.5 }}

@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { personalData } from "@/app/data/personal-data";
-import style from "./designation.module.css";
+import style from "../../../css/designation.module.css";
 export default function Designation() {
   const [anime, setAnime] = useState(false);
   const [isVis, setIsVis] = useState(false);

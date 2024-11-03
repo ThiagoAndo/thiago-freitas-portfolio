@@ -1,5 +1,5 @@
 import Link from "next/link";
-import "./btn.css";
+import "../../../css/btn.css"
 
 export default function Btns({ children, link, trgt }) {
   return (
