@@ -2,15 +2,17 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { projects } from "@/app/data/projects-data";
 
-import {
-  staggerContainer,
-} from "@/app/utils/motion-variants";
+import { staggerContainer } from "@/app/utils/motion-variants";
 import ProjectCard from "./card";
 
+const ProjectBody = ({ isMob }) => {
+  let project = "project-1";
 
+  if (isMob) {
+    project = "project-3";
+  }
 
-const ProjectBody = () => {
-  const [active, setActive] = useState("project-2");
+  const [active, setActive] = useState(project);
 
   return (
     <>
@@ -29,6 +31,7 @@ const ProjectBody = () => {
               {...project}
               active={active}
               handleClick={setActive}
+              isMob={isMob}
             />
           ))}
         </div>

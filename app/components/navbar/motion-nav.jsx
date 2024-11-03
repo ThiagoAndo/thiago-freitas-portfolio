@@ -6,7 +6,6 @@ import style from "./nav.module.css";
 export default function MotionNav({ children }) {
   const { navOpc, navZ } = useFrame();
 
-  console.log(navZ.current && "none");
   return (
     <motion.nav
       style={{

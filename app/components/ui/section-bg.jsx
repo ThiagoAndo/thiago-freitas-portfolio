@@ -5,8 +5,6 @@ import useDalay from "@/app/hooks/useDelay";
 
 export default function Bg({ time, animate, git = false }) {
   const isTime = useDalay(time);
-  console.log(isTime);
-  console.log("isTime");
   if (animate) {
     return (
       <>

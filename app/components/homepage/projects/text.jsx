@@ -9,7 +9,7 @@ export default function ProjectText() {
         animate={scaleAnime.anime}
         exit={scaleAnime.end}
         transition={scaleAnime.time}
-        className="mt-4 text-justify  text-taupe text-[18px] max-w-3xl leading-[30px]"
+        className="mt-4 md:mt-16 mx-auto text-justify md:pt-6 text-taupe text-[18px] max-w-3xl leading-[30px]"
       >
         These projects provide a comprehensive showcase of my professional
         abilities through hands-on examples of my work. Each project is

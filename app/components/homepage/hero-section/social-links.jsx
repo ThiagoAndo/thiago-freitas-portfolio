@@ -41,13 +41,13 @@ export default function SocialLinks() {
             ))}
           </motion.div>
           <div className="flex items-center gap-6 m-auto">
-            <Btns link={"#contact"} trgt={""} >
+            <Btns link={"#contact"} trgt={""}>
               <span>Contact me</span>
               <RiContactsFill size={16} />
             </Btns>
             <Btns
               link={
-                "https://drive.google.com/file/d/1hqU3YvJfD6LQ1O8bjnah-nQpRQLBkcdF/view?usp=sharing"
+                "https://drive.google.com/file/d/1guLM9lxgIiElYgjgzr74zyrBYW3fe8eE/view?usp=drive_link"
               }
               trgt={"_blank"}
             >

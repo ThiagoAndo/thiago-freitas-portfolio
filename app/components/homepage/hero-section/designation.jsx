@@ -23,8 +23,6 @@ export default function Designation() {
     }, 2100);
 
     setTimeout(() => {
-      console.log(size);
-      console.log("size");
       ref.current ? null : setAnime("ta-des");
     }, 4000);
   }, []);

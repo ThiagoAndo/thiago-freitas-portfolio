@@ -224,7 +224,7 @@ export const DisplacementSphere = (props) => {
               }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1.5, type: "spring", bounce: 0.5 }}
+              transition={{ duration: 1, type: "spring", bounce: 0.5 }}
               aria-hidden
               className={styles.canvas}
               data-visible={visible}

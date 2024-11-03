@@ -1,4 +1,4 @@
-import pladeholder from "/public/png/placeholder.png"
+import pladeholder from "/public/png/placeholder.png";
 export const personalData = {
   name: "Thiago Freitas",
   profile: pladeholder,
@@ -12,7 +12,7 @@ export const personalData = {
   facebook: "https://www.facebook.com/thiago.andodefreitas",
   linkedIn: "https://www.linkedin.com/in/thiago-ando-de-freitas-9b1137195/",
   twitter: "https://x.com/Thiago09455827",
-  stackOverflow: "https://stackoverflow.com/users/16840768/abu-said",
+  stackOverflow: "https://stackoverflow.com/users/22181115/thiago-ando",
   leetcode: "#",
   devUsername: "#",
   resume: "#",
