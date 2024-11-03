@@ -1,5 +1,4 @@
 // @flow strict
-import Image from "next/image";
 import Link from "next/link";
 import { BsPersonWorkspace } from "react-icons/bs";
 import AnimationLottie from "../../../utils/animation-lottie";

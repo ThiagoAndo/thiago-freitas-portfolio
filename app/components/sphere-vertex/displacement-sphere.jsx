@@ -45,7 +45,7 @@ export const DisplacementSphere = (props) => {
   const { scrollY } = useScroll();
   const navOpc = useTransform(
     scrollY,
-    [0, 700, 1200,2000],
+    [0, 1000, 1600,2300],
 
     ["1", "0","0","1"]
   );

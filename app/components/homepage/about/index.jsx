@@ -26,7 +26,7 @@ function AboutSection() {
     <PageSection
       id="about"
       tailwind={"my-6 lg:my-6 relative pt-28"}
-      stl={{ height: size === true ? "120vh" : "90vh" }}
+      stl={{ height: size === true ? "140vh" : "90vh" }}
       ref={des}
     >
       <AnimatePresence>

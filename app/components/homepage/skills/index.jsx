@@ -11,8 +11,9 @@ import FloatingPoints from "../../ui/floating-points";
 
 function Skills() {
   let sparc = null;
+  let style = null;
   let { match: size } = useMediaScreen(
-    "only screen and (min-width : 369px) and (max-width : 500px)"
+    "only screen and (min-width : 369px) and (max-width : 700px)"
   );
   let threshold = 0.4;
 
@@ -24,22 +25,23 @@ function Skills() {
 
   if (!size && desV) {
     sparc = <FloatingPoints />;
+    style = "skills";
   }
 
   return (
-    <div className={desV ? "skills" : ""}>
+    <div className={style}>
       <PageSection
         id={"skills"}
         tailwind={
-          "relative z-50 md:border-t md:border-[#25213b] mt-20 mb-24 lg:mt-40"
+          "relative z-50 md:border-t md:border-[#25213b] h-24  md:h-[120vh] 2xl:h-screen   md:mt-40  lg:mt-40"
         }
         ref={des}
       >
         <Title side={false}>
           <TextAnime txt={"SKILLS"} showTxt={desV} />
         </Title>
-        <Tech />
-        <Carrocel />
+        {!size && <Tech />}
+        <div className="mb-52 md:mt-0">{size && <Carrocel />}</div>
       </PageSection>
       {sparc}
     </div>
