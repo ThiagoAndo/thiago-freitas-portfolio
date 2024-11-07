@@ -36,7 +36,7 @@ export default function ProjectCard({
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className={`relative ${
         active === id ? "lg:flex-[3.5] flex-[10]" : "lg:flex-[0.5] flex-[2]"
-      } flex items-center justify-center min-w-[170px] bg-gray-500 rounded-[24px]
+      } flex items-center justify-center min-w-[170px] project-card rounded-[24px]
       h-[420px] cursor-pointer card-shadow`}
       onClick={() => handleClick(id)}
     >

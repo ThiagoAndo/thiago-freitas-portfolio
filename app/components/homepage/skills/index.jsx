@@ -33,7 +33,7 @@ function Skills() {
       <PageSection
         id={"skills"}
         tailwind={
-          "relative z-50 md:border-t md:border-[#25213b] h-24  md:h-[120vh] 2xl:h-screen   md:mt-40  lg:mt-40"
+          "relative z-50 md:border-t md:border-[#25213b] h-24 md:h-[120vh] 2xl:h-screen   md:mt-40  lg:mt-40"
         }
         ref={des}
       >

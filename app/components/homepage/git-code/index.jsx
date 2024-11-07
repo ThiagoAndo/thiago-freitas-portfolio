@@ -36,12 +36,12 @@ function GitCode() {
           <TextAnime txt={"DAYS I CODE"} showTxt={desV} />
         </Title>
         <AnimatePresence>
-          {desV === true ? <Bg time={500} animate={true} git={true} /> : null}
+          {desV === true ? <Bg time={500} animate={true}/> : null}
         </AnimatePresence>
       </>
-      <div className="mt-12 py-8">
-        <div className="grid mt-12 md:mt-0 grid-cols-1 lg:grid-cols-3">
-          <div className="flex flex-col justify-center mt-16 col-span-2">
+      <div className="md:mt-12 md:py-8">
+        <div className="grid mt-12 md:pb-8 2xl:mt-0 grid-cols-1 lg:grid-cols-3">
+          <div className="flex flex-col justify-center md:mt-16 col-span-2">
             <BdAnime>
               <GitHubCalendar
                 username="ThiagoAndo"

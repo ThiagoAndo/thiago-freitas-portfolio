@@ -5,7 +5,7 @@ import { skillsData } from "@/app/data/skills";
 const Tech = () => {
   return (
     <>
-      <div className="flex flex-wrap justify-center gap-10 mt-14  2xl:mt-40 " >
+      <div className="flex flex-wrap justify-center gap-10 mt-14 md:mt-3 2xl:mt-40 " >
         {skillsData.map((skill, id) => (
           <div className="w-28 h-28" key={id}>
             <BallCanvas icon={skillsImage(skill)?.src} />

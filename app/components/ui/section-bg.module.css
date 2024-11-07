@@ -6,6 +6,7 @@
   position: absolute;
   border-radius: 15px;
   z-index: -1000;
+  padding: 1rem;
 }
 
 .bg_git{
@@ -16,6 +17,8 @@
   position: absolute;
   border-radius: 15px;
   z-index: -1000;
+  padding: 1rem;
+
 }
 
 @media only screen and (max-width: 1300px) {
