@@ -7,7 +7,6 @@ import { linkChildrens } from "../../../utils/childrens";
 import { MdDownload } from "react-icons/md";
 import UiLinks from "./UiLinks";
 import Btns from "./btn-hero";
-
 import { staggerChildren } from "@/app/utils/motion-variants";
 
 export default function SocialLinks() {
@@ -47,7 +46,7 @@ export default function SocialLinks() {
             </Btns>
             <Btns
               link={
-                "https://drive.google.com/file/d/1guLM9lxgIiElYgjgzr74zyrBYW3fe8eE/view?usp=drive_link"
+                "https://drive.google.com/file/d/1h3_Ez95wwBlUZZ0uKJ3FUYfxd641EtmX/view?usp=drive_link"
               }
               trgt={"_blank"}
             >

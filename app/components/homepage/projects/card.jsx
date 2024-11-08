@@ -44,8 +44,7 @@ export default function ProjectCard({
         className="absolute top-0 left-0 z-10 bg-jetLight 
       h-full w-full opacity-[0.5] rounded-[24px]"
       ></div>
-
-      {active === id ? (
+         {active === id ? (
         <Image
           src={image}
           alt={name}
@@ -60,7 +59,7 @@ export default function ProjectCard({
         ${
           isMob ? "relative" : "absolute"
         } lg:bottom-[6rem] lg:rotate-[-90deg] lg:origin-[0,0]
-        leading-none z-20 text-black`}
+        leading-none z-20 text-white`}
           >
             {name}
           </h3>
@@ -69,7 +68,7 @@ export default function ProjectCard({
         <>
           <div
             className="absolute bottom-0 p-8 justify-start w-full 
-            flex-col bg-[rgba(122,122,122,0.78)] rounded-b-[24px] z-20"
+            flex-col bg-[rgba(38,37,37,0.78)] rounded-b-[24px] z-20"
           >
             <div className="absolute inset-0 flex justify-end m-3"></div>
 

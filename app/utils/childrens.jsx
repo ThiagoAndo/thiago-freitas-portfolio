@@ -1,5 +1,8 @@
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { FaFacebook, FaTwitterSquare, FaStackOverflow } from "react-icons/fa";
+import {  FaStackOverflow } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { SiLeetcode } from "react-icons/si";
+
 import { personalData } from "@/app/data/personal-data";
 import PersonIcon from "@mui/icons-material/Person";
 import LightbulbIcon from "@mui/icons-material/Lightbulb";
@@ -10,9 +13,9 @@ import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 export const linkChildrens = [
   { data: personalData.github, ico: <BsGithub size={30} /> },
   { data: personalData.linkedIn, ico: <BsLinkedin size={30} /> },
-  { data: personalData.facebook, ico: <FaFacebook size={30} /> },
+  { data: personalData.leetcode, ico: <SiLeetcode size={30} /> },
   { data: personalData.stackOverflow, ico: <FaStackOverflow size={30} /> },
-  { data: personalData.twitter, ico: <FaTwitterSquare size={30} /> },
+  { data: personalData.twitter, ico: <FaSquareXTwitter size={33} /> },
 ];
 
 export const navChildrens = [

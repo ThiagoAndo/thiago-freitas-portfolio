@@ -4,11 +4,24 @@ import ContactWithoutCaptcha from "./contact-without-captcha";
 import Info from "./contact-info";
 import Title from "../../ui/pageTitle";
 import PageSection from "../../ui/section";
+import useMediaScreen from "@/app/hooks/useMediaScreen";
+import { useInView } from "react-intersection-observer";
+import TextAnime from "../../ui/anime-text";
 
 function ContactSection() {
+    let { match: size } = useMediaScreen(
+      "only screen and (min-width : 369px) and (max-width : 500px)"
+    );
+    let threshold = 0.4;
+    if (size) threshold = 0.5;
+    const { ref: des, inView: desV } = useInView({
+      threshold,
+    });
   return (
-    <PageSection id={"contact"}>
-      <Title side={true}>CONTACT</Title>
+    <PageSection ref={des} id={"contact"}>
+      <Title>
+        <TextAnime txt={"CONTACT"} showTxt={desV} />
+      </Title>
       <div className="grid md:pt-24 grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         <ContactWithoutCaptcha />
         <div className="lg:w-3/4 ">

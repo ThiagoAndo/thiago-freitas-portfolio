@@ -48,27 +48,33 @@ function AboutSection() {
                 className="grid pb-12 grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16"
               >
                 <motion.div className="order-1 lg:order-1">
-                    <div className="mb-5  text-[#00adf4] font-bold font-roboto text-base 2xl:text-xl uppercase">
-                      <TextAnime txt={"WHO I AM ?"} showTxt={isTime} />
-                    </div>
-                    <p className=" mb-8 md:mb-0 text-gray-200 text-justify text-base 2xl:text-xl">
-                      My name is Thiago Freitas, and I am a professional and
-                      enthusiastic programmer. I am a self-driven, quick starter
-                      with a passion for programming and a curious mind that
-                      thrives on solving complex and challenging real-world
-                      problems. As a lifelong learner, I love to explore and
-                      master new technologies.
-                      <br />
-                      I am deeply interested in all aspects of web application
-                      development, with a core focus on JavaScript, which I use
-                      extensively in my work. Through comprehensive exposure to
-                      foundational concepts and applying them across various
-                      projects, my love for web development has only grown.
-                      <br />I am passionate about building and implementing
-                      algorithms to address real-world challenges. I am open to
-                      any job opportunities that align with my skills and
-                      interests.
-                    </p>
+                  <div className="mb-5  text-[#00adf4] font-bold font-roboto text-base 2xl:text-xl uppercase">
+                    <TextAnime
+                      txt={"Hi, I'm Thiago Freitas "}
+                      showTxt={isTime}
+                    />
+                  </div>
+                  <p className=" mb-8 md:mb-0 text-gray-200 text-justify text-base 2xl:text-xl">
+                    I am <strong>passionate </strong>about web development with
+                    a love for building impactful applications and am
+                    specialized in building scalable, user-centric web
+                    applications using JavaScript, React, and Next.js. As an
+                    independent developer, I’ve delivered projects ranging from
+                    full-stack e-commerce platforms with dynamic product
+                    filtering and responsive design to API-driven applications
+                    that provide real-time data insights. I approach every
+                    project with genuine enthusiasm, driven by a deep passion
+                    for crafting seamless user experiences and solving complex
+                    problems through code.
+                    <br />
+                    With a background in mechanical design, I bring an
+                    analytical mindset and attention to detail to every project.
+                    I’m constantly learning and eager to take on new challenges
+                    in web development.
+                    <br />
+                    Let’s connect if you’re looking for a dedicated and
+                    adaptable developer ready to make an impact!
+                  </p>
                 </motion.div>
                 <motion.div className="flex justify-center order-2 lg:order-2 py-12">
                   <Image

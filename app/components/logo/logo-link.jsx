@@ -21,9 +21,13 @@ const {navOpc} = useFrame();
         bdCol={"transparent"}
         cl={"#000000"}
       >
-        <Link className={style.logo} href={"#"}>
-          <spam className="font
-           font-bold text-2xl">T</spam>
+        <Link className={style.logo} href={"https://github.com/ThiagoAndo"} target="blank_">
+          <spam
+            className="font
+           font-bold text-2xl text-blue-600"
+          >
+            T
+          </spam>
         </Link>
       </ThisTooltip>
     </motion.div>

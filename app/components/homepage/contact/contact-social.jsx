@@ -2,14 +2,16 @@ import Link from "next/link";
 import { personalData } from "@/app/data/personal-data";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { FaFacebook, FaStackOverflow } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaSquareXTwitter } from "react-icons/fa6";
 import { IoLogoGithub } from "react-icons/io";
+import { SiLeetcode } from "react-icons/si";
+
 const childrens = [
   { comp: IoLogoGithub, data: "github" },
   { comp: BiLogoLinkedin, data: "linkedIn" },
-  { comp: FaXTwitter, data: "twitter" },
+  { comp: FaSquareXTwitter, data: "twitter" },
   { comp: FaStackOverflow, data: "stackOverflow" },
-  { comp: FaFacebook, data: "facebook" },
+  { comp: SiLeetcode, data: "leetcode" },
 ];
 
 export default function Social() {
