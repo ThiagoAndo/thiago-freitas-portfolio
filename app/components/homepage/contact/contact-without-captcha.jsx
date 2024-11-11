@@ -1,13 +1,13 @@
 "use client";
 // @flow strict
 import { isValidEmail } from "@/app/utils/check-email";
-import axios from "axios";
 import { useState } from "react";
 import { TbMailForward } from "react-icons/tb";
 import { toast } from "react-toastify";
 
 function ContactWithoutCaptcha() {
   const [error, setError] = useState({ email: false, required: false });
+  const [resp, setResp] = useState({ msg: "", status: false });
   const [userInput, setUserInput] = useState({
     name: "",
     email: "",
@@ -30,31 +30,32 @@ function ContactWithoutCaptcha() {
     } else {
       setError({ ...error, required: false });
     }
-
-    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-    const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
-
     try {
-      const res = await emailjs.send(serviceID, templateID, userInput, options);
-      const teleRes = await axios.post(
-        `${process.env.NEXT_PUBLIC_APP_URL}/api/contact`,
-        userInput
-      );
+      const response = await fetch("api/contact", {
+        method: `POST`,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userInput),
+      });
 
-      if (res.status === 200 || teleRes.status === 200) {
-        toast.success("Message sent successfully!");
+      if (response.status === 200 || response.status === 500) {
+        const body = await response.json();
+        setResp({ msg: body.message, success: true });
         setUserInput({
           name: "",
           email: "",
           message: "",
         });
+        setTimeout(()=>{
+          setResp({ msg: "", success: null });
+        },3000)
       }
     } catch (error) {
       toast.error(error?.text || error);
     }
   };
-
+  console.log(resp);
   return (
     <div className="">
       <p className="mb-5  text-[#00adf4] font-bold text-xl uppercase">
@@ -138,6 +139,11 @@ function ContactWithoutCaptcha() {
               <span>Send Message</span>
               <TbMailForward className="mt-1" size={18} />
             </button>
+            {resp.success ? (
+              <p className="text-base text-[#16f2b3]">{resp.msg}</p>
+            ) : (
+              <p className="text-sm text-red-400">{resp.msg}</p>
+            )}
           </div>
         </div>
       </div>
