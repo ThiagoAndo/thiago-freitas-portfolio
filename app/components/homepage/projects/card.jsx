@@ -44,7 +44,7 @@ export default function ProjectCard({
         className="absolute top-0 left-0 z-10 bg-jetLight 
       h-full w-full opacity-[0.5] rounded-[24px]"
       ></div>
-         {active === id ? (
+      {active === id ? (
         <Image
           src={image}
           alt={name}
@@ -55,7 +55,7 @@ export default function ProjectCard({
         <div className="flex items-center justify-start pr-[4.5rem]">
           <h3
             className={`font-extrabold uppercase w-[200px] h-[30px]
-        whitespace-nowrap sm:text-[24px] text-[18px] text-timberWolf tracking-[1px]
+        whitespace-nowrap text-[16px] sm:text-[18px]  text-timberWolf tracking-[1px]
         ${
           isMob ? "relative" : "absolute"
         } lg:bottom-[6rem] lg:rotate-[-90deg] lg:origin-[0,0]

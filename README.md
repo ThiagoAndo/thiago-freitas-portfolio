@@ -1,91 +1,73 @@
----
-# [Built Portfolio With GitHub ]()
----
- My love of coding drives me internally and I relish every opportunity to tackle the deepest technical challenges. From developing a user-friendly frontend to building reliable web servers, I've worked on many projects. Also, have experience with cross-platform mobile application development.
+# Thiago's Front-End Developer Portfolio
 
-
----
-<hr>
-
-
----
+Welcome to my portfolio repository! Here, you'll find information about me, my projects, and the technologies I work with. My goal is to showcase my skills and demonstrate my passion for front-end development.
 
 
 
- "My name is Thiago Freitas. I am a professional and enthusiastic programmer in my daily life. I am a self-driven, quick starter, passionate programmer with a curious mind who enjoys solving a complex and challenging real-world problems. I am lifelong learner who love to learn and explore new technologies. I love almost all the stacks of web application development. My core skill is based on JavaScript and I love to do most of the things using it. By comprehensive exposure to the underlying concepts and applying them vividly to various projects, my love for wb development came into being. I am a passionate individual who thrives to build and apply algorithms to solve real-world problems.I am available for any kind of job opportunity that suits my skills and interests.",
----
-<hr>
-   
-
----
-
-I'm enthusiastic about tech, coding, and learning new things about computers and what they can do. I've been dabbling with coding since roughly the age of 15 until I started studying computer science at the university at 19, where my interest really peaked. Take a peek at the projects I have done, or jump straight to my github. When I have time I sometimes contributing to open source projects and answer questions in forums and help people with code.
-
-Other than coding I enjoy tinkering with computers and my homelab, as of now includes an old PC running Raid 1 TrueNAS and a Raspberry Pi 3 running Pi-hole and PiVPN. I also love to attended hackathons where people and code meet together to solve solutions in a hastly manner
+## Table of Contents
+- [About Me](#about-me)
+- [Projects](#projects)
+- [Skills and Tools](#skills-and-tools)
+- [How to View](#how-to-view)
+- [Contact Information](#contact-information)
+- [Acknowledgments](#acknowledgments)
 
 
----
-<hr>
-
----
+## About Me
+Hi! I'm Thiago, a front-end developer passionate about crafting engaging user experiences. With a strong focus on React and modern JavaScript frameworks, I strive to build web applications that are not only functional but also visually appealing and responsive. My current goal is to contribute to innovative teams and continue honing my skills in front-end development.
 
 
 
+## Projects
 
----
-<hr>
+### 1. Localized Weather and Events App
+- **Description**: A comprehensive app that provides localized weather updates and event information.
+- **Technologies Used**: React, OpenWeather API, CSS Modules.
+- **Role**: Sole developer responsible for UI/UX design, API integration, and responsiveness.
+- **Highlights**: Dynamic weather displays and seamless event filtering based on user location.
 
----
+### 2. E-Commerce Application
+- **Description**: A fully functional e-commerce platform with features like pagination, shopping cart, and product filtering.
+- **Technologies Used**: React, Redux, Node.js, MongoDB.
+- **Role**: Front-end developer.
+- **Highlights**: Implemented efficient pagination and optimized user navigation.
 
+### 3. Connected World Explorer
+- **Description**: A project designed to visualize global connections through an interactive interface.
+- **Technologies Used**: D3.js, React, REST APIs.
+- **Role**: Front-end developer.
+- **Highlights**: Delivered a highly interactive and visually engaging data visualization tool.
 
-
-
----<hr>
-Greetings! I'm Aditya Kumar, a dedicated software engineer located in India. My expertise spans TypeScript, JavaScript, Node.js, React.js, and Next.js, encompassing both frontend and backend development.
-
-I have a proven track record of crafting high-quality digital solutions, from creating seamless user interfaces with React.js to architecting robust backend systems using Node.js. My focus is always on delivering clean, efficient, and scalable code that exceeds expectations.
-
-Throughout my career, I've had the opportunity to work on a variety of projects, each presenting unique challenges and opportunities for growth. I thrive on the continuous learning and problem-solving inherent in the tech industry.
-
-Beyond coding, I enjoy staying abreast of the latest technological advancements and collaborating with fellow enthusiasts. Interested in discussing how we can collaborate on your next project? Feel free to get in touch. Let's transform ideas into reality and make a meaningful impact together.
-
----
-
-In my free time, I like to watch animes/web series, listen to music (and very early stage of learning piano), read and explore new stuff in tech and try out new technologies to build fun side projects.
-
-
----<hr>
-
----
- I enjoy seeking out creative solutions to complex problems and building things that empower others to do the same.
-
----<hr>
-Hey! 😄 My name is Aman Shrivastava, Self Driven, Quick Starter Passionate Programmer With Curious Mind Focused and enthusiastic developer with a keen interest in software development and Coompetitive Programming. By comprehensive exposure to the underlying concepts and applying them vividly to various projects, my love for these domains came into being. I am a passionate individual who thrives to build and apply algorithms to solve real-world problems.
----
+### 4. Store Backend API
+- **Description**: A RESTful API designed for students building front-end applications.
+- **Technologies Used**: Node.js, Express, MongoDB.
+- **Role**: API developer.
+- **Highlights**: Provides robust and scalable endpoints for user management and product handling.
 
 
 
----<hr>
-A constant beginner and lifelong learner. I’m passionate about web development, leadership, data visualization, and sharing my knowledge with others.
+## Skills and Tools
+- **Languages**: JavaScript, HTML, CSS.
+- **Libraries & Frameworks**: React, Redux, Node.js, Express, TailwindCSS.
+- **Tools**: Git, GitHub, VSCode, Figma.
+- **Other**: REST APIs, Responsive Design, Agile Development.
 
-For those who find real joy in coding while listening to some good music, you came to the right place! All developers are welcome
----
+
+
+## How to View
+- **Live Portfolio Website**: [Insert Link Here]
+- **GitHub Repositories**: [Insert Link Here]
 
 
 
----
+## Contact Information
+- **Email**: [Insert Email Here]
+- **LinkedIn**: [Insert LinkedIn Profile Here]
+- **GitHub**: [Insert GitHub Profile Here]
 
-# Packages Used :package:
 
-| Used Package List  |
-| :----------------: |
-|        next        |
-|  @emailjs/browser  |
-|    lottie-react    |
-| react-fast-marquee |
-|    react-icons     |
-|   react-toastify   |
-|        sass        |
-|    tailwindcss     |
 
----
+## Acknowledgments
+Special thanks to mentors, peers, and the development community for their support and inspiration throughout my journey.
+
+
