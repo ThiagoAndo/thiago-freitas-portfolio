@@ -71,18 +71,18 @@ React router dom, Mobiletfirst workflow, useContext API, React Bootstrap.
 
 
 ## How to View
-- **Live Portfolio Website**: [Insert Link Here]
-- **GitHub Repositories**: [Insert Link Here]
+- [Live Portfolio Website](https://thiago-freitas-portfolio.vercel.app/)
 
 
 
 ## Contact Information
-- **Email**: [Insert Email Here]
-- **LinkedIn**: [Insert LinkedIn Profile Here]
-- **GitHub**: [Insert GitHub Profile Here]
+- **Email**: ando.thiago@gmail.com
+- **LinkedIn**: [Profile](https://www.linkedin.com/in/thiago-ando-de-freitas-9b1137195/)
 
-
-
+##
+<h3 style="color:black;">"The impediment to action advances action. What stands in the way becomes the way."</h3>
+<h3 style="color:black;">Marcus Aurelius </h3>
+</div>
 
 
 

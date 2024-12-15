@@ -46,7 +46,7 @@ export default function SocialLinks() {
             </Btns>
             <Btns
               link={
-                "https://drive.google.com/file/d/1f98SI2z5oa26GXKbUPEGs0EeL703hD_T/view?usp=sharing"
+                "https://drive.google.com/file/d/19mRssOpb9bQm8DzlPTXw8nv41Eu-DCbn/view?usp=drive_link"
               }
               trgt={"_blank"}
             >
