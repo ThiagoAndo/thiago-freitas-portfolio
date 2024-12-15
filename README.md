@@ -27,30 +27,46 @@ Hi! I'm Thiago, a front-end developer passionate about crafting engaging user
 - **Role**: Front-end developer.
 - **Highlights**: Implemented efficient pagination, responsive design, user-friendly interface, local storage integration .
 
-  - Repository - [Store-e-commerce](https://github.com/ThiagoAndo/Store-e-commerce.git)
-  - Live Website - [Next Store](https://store-comerce.vercel.app/)
+  - Repository - [Next Store](https://github.com/ThiagoAndo/Store-e-commerce.git)
+  - Live Website - [Vercel](https://store-comerce.vercel.app/)
   <p align="center"> <img width="1000" src="public/gif/forth.gif"></p>
+
 
 ### 2. Connected World Explorer
 - **Description**: A project designed to visualize global connections through an interactive interface.
 
-- **Technologies Used**: D3.js, React, REST APIs.
+- **Technologies Used**: ReactJS, Mui material, Redux toolkit, Framer motion, Leaflet
+React router dom, Mobiletfirst workflow, useContext API, React Bootstrap.
 - **Role**: Front-end developer.
+- **APIs**: REST Countries, TimeZoneDB, Geoapify, OpenWeather ,GeoHive-( Population by Sex and Marital Status, Electoral Division, Census 2016, Theme 1.2, Ireland, 2016, CSO & Tailte Éireann )
+.
 - **Highlights**: Delivered a highly interactive and visually engaging data visualization tool.
+  - Repository - [Connected World Explorer](https://github.com/ThiagoAndo/Connected-World-Explorer.git)
+  - Live Website - [Netlify](https://store-comerce.vercel.app/)
+  <p align="center"> <img width="1000" src="public/gif/connected.gif"></p>
 
-### 3. Store Backend API
+### 3. Next Store Backend API
 - **Description**: A RESTful API designed for students building front-end applications.
-- **Technologies Used**: Node.js, Express, MongoDB.
+- **Technologies Used**: Node.js, Express JS, Jsonwebtoken, Nodemailer, Body-parser, Bcryptjs, Bootstrap.
 - **Role**: API developer.
 - **Highlights**: Provides robust and scalable endpoints for user management and product handling.
+  - Repository - [Next Store API](https://github.com/ThiagoAndo/Next-store-API.git)
+  - Live Website - [Documentation](https://next-store-api-62m2.onrender.com/doc)
+  - Live Website - [Build-in UI](https://next-store-api-62m2.onrender.com/userInterface)
+  <p align="center"> <img width="1000" src="public/png/api.png"></p>
+  Fig. 01- API documentation.
+  <br/>
+  <br/>
+  <p align="center"> <img width="1000" src="public/png/UI.png"></p>
+  Fig. 02- Build-in UI.
 
 
 
 ## Skills and Tools
 - **Languages**: JavaScript, HTML, CSS.
 - **Libraries & Frameworks**: React, Redux, Node.js, Express, TailwindCSS.
-- **Tools**: Git, GitHub, VSCode, Figma.
-- **Other**: REST APIs, Responsive Design, Agile Development.
+- **Tools**: Git, GitHub, VSCode, Figma, Postman.
+- **Other**: REST APIs, Responsive Design.
 
 
 
