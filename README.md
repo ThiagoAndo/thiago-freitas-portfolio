@@ -1,5 +1,5 @@
 # Thiago's Front-End Developer Portfolio
-<p align="center"> <img width="1000" src="public/png/home.gif"></p>
+<p align="center"> <img width="1000" src="public/gif/home.gif"></p>
 
 Welcome to my portfolio repository! Here, you'll find information about me, my projects, and the technologies I work with. My goal is to showcase my skills and demonstrate my passion for front-end development.
 
@@ -23,13 +23,13 @@ Hi! I'm Thiago, a front-end developer passionate about crafting engaging user
 
 ### 1. E-Commerce Application
 - **Description**: A fully functional e-commerce platform with features like pagination, shopping cart, and product filtering.
-- **Technologies Used**: React, Redux, Node.js, MongoDB.
+- **Technologies Used**: Next JS, Redux toolkit, Framer motion, seContext API, Keen-slider.
 - **Role**: Front-end developer.
-- **Highlights**: Implemented efficient pagination and optimized user navigation.
+- **Highlights**: Implemented efficient pagination, responsive design, user-friendly interface, local storage integration .
 
   - Repository - [Store-e-commerce](https://github.com/ThiagoAndo/Store-e-commerce.git)
   - Live Website - [Next Store](https://store-comerce.vercel.app/)
-  <p align="center"> <img width="1000" src="public/png/home.gif"></p>
+  <p align="center"> <img width="1000" src="public/gif/forth.gif"></p>
 
 ### 2. Connected World Explorer
 - **Description**: A project designed to visualize global connections through an interactive interface.
